@@ -1,0 +1,114 @@
+@import 'src/environments/_variables';
+
+
+//-------- our sections
+.section_row{
+    width: 100%;
+    height: calc(150px + 5vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+}
+
+  
+.section_row_title{
+// font-size: 4em; 
+// color: $grey2_font_color;
+// margin: 3vw 0px 40px 0px;
+// font-family: $mnrt_font_family;
+
+    h2{
+        font-size: 40px; 
+        color: $grey2_font_color;
+        padding: 30px 0px 10px 0px;
+        //font-family: $mnrt_font_family;
+        font-family: $Bebas_font;
+    }
+} 
+
+.section_header_line{
+    width: 100px; 
+    border-top: 5px solid $gold_color;
+  }
+
+.aboutus-row{
+    background-color: whitesmoke;
+    width: 100%;
+    padding:80px 10% 80px 10%;
+    
+}
+.aboutus-col{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutus-header{
+    width: 100%;
+    padding-left:20px;
+
+    h2{
+        font-size: 30px;
+        font-family: $Bebas_font;
+    }
+}
+.aboutus-text{
+    padding: 20px;
+    border-radius: 20px 0px 20px 0px;
+    background: white;
+    h3{
+        font-size: 20px;
+        font-family: $mnrt_font_family;
+        //font-style: italic;
+    }
+}
+
+.resources-container{
+    width: 80%;
+    //border: 1px solid $gold_color;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 0px 20px 0px;
+}
+.resources-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    background: $gold_color;
+    padding: 8px;
+    h2{
+        font-size: 30px;
+        font-family: $Bebas_font;
+        margin: 0;
+        padding: 0;
+    }
+}
+.resources-details{
+    padding: 20px;
+
+    hr{
+        margin-top: 0;
+    }
+}
+
+
+.resources-title{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    mat-icon{
+        margin-top: 5px; 
+        color: $gold_color !important;
+    }
+    h2{
+        font-size: 20px;
+        font-family: $mnrt_font_family;
+        color: $grey2_font_color;
+    }
+}

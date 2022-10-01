@@ -1,0 +1,77 @@
+<form [formGroup]="NewForm">
+    <h2 mat-dialog-title>Update News</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <div class="form-group col-lg-3 col-sm-3">
+                <img [src]="image_linkurl" class="w-100" alt="profile picture"
+                    onerror="this.src='/assets/images/leaders/default.png';">
+                    <input type="file" class="file-upload" (change)="onFileSelected($event)" accept="image/jpeg">
+            </div>
+            <div class="form-group col-lg-9 col-sm-12">
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>News Description</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="news_des"
+                            placeholder="-Enter News Description-">
+                        <div *ngIf="NewForm.get('news_des')?.touched && NewForm.get('news_des')?.invalid"
+                            class="text-danger">News Description is required</div>
+                    </div>
+                </div>-->
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>description</label>
+                            <textarea class="form-control form-control-sm" formControlName="news_des"
+                            placeholder="Enter news_description"></textarea>
+                        <div *ngIf="NewForm.get('news_des')?.touched && NewForm.get('news_des')?.invalid"
+                            class="text-danger">description is required</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >News Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="news_title"
+                            placeholder="-Enter title-">
+                        <div *ngIf="NewForm.get('news_title')?.touched && NewForm.get('news_title')?.invalid"
+                            class="text-danger">News Title is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Published Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="pub_date" ngbDatepicker #d1="ngbDatepicker" [startDate]="fromDate!">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d1.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                        <div *ngIf="NewForm.get('pub_date')?.touched && NewForm.get('pub_date')?.invalid"
+                            class="text-danger">Published Date is required</div>
+                      </div>
+                      <div class="form-group col">
+                        <label>Expire Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="exp_date" ngbDatepicker #d2="ngbDatepicker">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+               
+            </div>
+        </div>
+
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button  class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>
+
+<!-- [disabled]="NewForm.invalid"  -->

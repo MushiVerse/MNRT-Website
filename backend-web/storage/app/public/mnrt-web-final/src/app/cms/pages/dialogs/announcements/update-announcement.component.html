@@ -1,0 +1,86 @@
+<form [formGroup]="AnnouncementForm">
+    <h2 mat-dialog-title>Update Announcement</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <div class="form-group col-lg-3 col-sm-3">
+                <img [src]="attachmenturl" class="w-100" alt="Announcement attachment"
+                    onerror="this.src='/assets/images/announcements/default.jpg';">
+                    <input type="file" class="file-upload" (change)="onFileSelected($event)" accept="image/jpeg">
+            </div>
+            <div class="form-group col-lg-9 col-sm-12">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="ann_title"
+                            placeholder="-Enter Title-">
+                        <div *ngIf="AnnouncementForm.get('ann_title')?.touched && AnnouncementForm.get('ann_title')?.invalid"
+                            class="text-danger">Title is required</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Description</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="ann_des"
+                            placeholder="-Enter Description-">
+                        <div *ngIf="AnnouncementForm.get('ann_des')?.touched && AnnouncementForm.get('ann_des')?.invalid"
+                            class="text-danger">Description is required</div>
+                    </div>
+                </div>
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label >Title</label>
+                        <select formControlName="title" class="form-control form-control-sm">
+                          <option *ngFor="let title of titles" value="{{title.value}}" [selected]="title.selected == true">{{title.text}}</option>
+                        </select>
+                        <div *ngIf="AnnouncementForm.get('title')?.touched && AnnouncementForm.get('title')?.invalid"
+                            class="text-danger">Title is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="start_date" ngbDatepicker #d1="ngbDatepicker" [startDate]="fromDate!">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d1.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                        <div *ngIf="AnnouncementForm.get('start_date')?.touched && AnnouncementForm.get('start_date')?.invalid"
+                            class="text-danger">Start date is required</div>
+                      </div>
+                      <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="end_date" ngbDatepicker #d2="ngbDatepicker">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Biography</label>
+                        <textarea class="form-control form-control-sm" formControlName="biography"
+                            placeholder="-Enter Biography-"></textarea>
+                        <div *ngIf="AnnouncementForm.get('biography')?.touched && AnnouncementForm.get('biography')?.invalid"
+                            class="text-danger">Biography is required</div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button  class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>
+
+<!-- [disabled]="AnnouncementForm.invalid"  -->

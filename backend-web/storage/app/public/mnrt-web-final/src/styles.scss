@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700,900');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+//@import url('http://fonts.cdnfonts.com/css/book-antiqua');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@import 'src/environments/_variables';
+
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    & > [class^="col-"],
+    & > [class*=" col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //font-family: "Quicksand", sans-serif;
+    font-family: 'Book Antiqua', sans-serif;
+    font-size: 16px;
+    //background-color: whitesmoke !important;
+    //background: whitesmoke !important;
+}
+.default_font{
+    font-family: $mnrt_font_family;
+    font-size: 16px;
+}
+
+// html {
+//   overflow:   scroll;
+// }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: goldenrod;
+  border-radius: 10px;
+}
+
+// html, body { height: 100%; margin: 0px; padding: 0px;}
+// body { margin: 0; font-family: Roboto, $mnrt_font_family; }
+
+@import 'src/environments/_variables';
+
+.leveltwo-main-panel{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.leveltwo-main-contents{
+    width: 100%;
+    text-align: left;
+
+    h2{
+        font-size: 30px;
+        color: $grey2_font_color;
+        padding: 30px 0px 10px 0px;
+        //font-family: $mnrt_font_family;
+        font-family: $Bebas_font;
+    }
+}
+
+.successSnarkBar{
+  background: #e6e945;
+  color: black;
+  font-size: 1.4rem;
+  button{
+    color: black
+  }
+}
+.failureSnarkBar{
+  background: #800a06;
+  color: white;
+  font-size: 1.4rem;
+  button{
+    color: white
+  }
+}
+
+
+
+
+

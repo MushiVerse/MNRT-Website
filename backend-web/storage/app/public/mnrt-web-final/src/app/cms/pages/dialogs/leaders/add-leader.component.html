@@ -1,0 +1,123 @@
+<form [formGroup]="LeaderForm">
+    <h2 mat-dialog-title>New Leader</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <div class="form-group col-3">
+                <img src="" class="w-100" alt="profile picture"
+                    onerror="this.src='/assets/images/leaders/default.png';">
+                <button class="btn btn-secondary">Upload Photo</button>
+            </div>
+            <div class="form-group col-9">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Name</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="name"
+                            placeholder="Enter Name">
+                        <div *ngIf="LeaderForm.get('name')?.touched && LeaderForm.get('name')?.invalid"
+                            class="text-danger">Name is required</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Title</label>
+                        <select formControlName="title" class="form-control form-control-sm">
+                          <option *ngFor="let title of titles" value="{{title.value}}" [selected]="title.selected == true">{{title.text}}</option>
+                        </select>
+                        <div *ngIf="LeaderForm.get('title')?.touched && LeaderForm.get('title')?.invalid"
+                            class="text-danger">Title is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Facebook Link</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="facebook_link"
+                            placeholder="Enter Facebook Link">
+                        <div *ngIf="LeaderForm.get('facebook_link')?.touched && LeaderForm.get('facebook_link')?.invalid"
+                            class="text-danger">Facebook Link is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Instagram Link</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="instagram_link"
+                            placeholder="Enter Instagram Link">
+                        <div *ngIf="LeaderForm.get('instagram_link')?.touched && LeaderForm.get('instagram_link')?.invalid"
+                            class="text-danger">Instagram Link is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Twitter Link</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="twitter_link"
+                            placeholder="Enter Name">
+                        <div *ngIf="LeaderForm.get('twitter_link')?.touched && LeaderForm.get('twitter_link')?.invalid"
+                            class="text-danger">Twitter Link is required</div>
+                      </div>
+                </div>
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="title"
+                            placeholder="Enter Title">
+                        <div *ngIf="LeaderForm.get('title')?.touched && LeaderForm.get('title')?.invalid"
+                            class="text-danger">Title is required</div>
+                    </div>
+                </div>-->
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title Start</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="start_date">
+                        <div *ngIf="LeaderForm.get('start_date')?.touched && LeaderForm.get('start_date')?.invalid"
+                            class="text-danger">Start date is required</div>
+                    </div>
+                    <div class="form-group col">
+                        <label>Title End</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="start_end" >
+                    </div>
+                </div>-->
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="start_date" ngbDatepicker #d1="ngbDatepicker" [startDate]="fromDate!">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d1.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                        <div *ngIf="LeaderForm.get('start_date')?.touched && LeaderForm.get('start_date')?.invalid"
+                            class="text-danger">Start date is required</div>
+                      </div>
+                      <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="end_date" ngbDatepicker #d2="ngbDatepicker">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Biography</label>
+                        <textarea class="form-control form-control-sm" formControlName="biography"
+                            placeholder="Enter Name"></textarea>
+                        <div *ngIf="LeaderForm.get('biography')?.touched && LeaderForm.get('biography')?.invalid"
+                            class="text-danger">Biography is required</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button [disabled]="LeaderForm.invalid" type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>

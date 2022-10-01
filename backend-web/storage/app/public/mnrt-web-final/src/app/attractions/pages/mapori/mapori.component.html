@@ -1,0 +1,108 @@
+<div class="row no-gutters">
+    <div class="col leveltwo-main-panel">
+        <div class="leveltwo-main-contents">
+            <h2>MAPORI</h2>
+            <hr/>
+        </div>
+    </div>
+</div>
+<div class="row no-gutters">
+    <div class="col-12">
+        <mat-card>
+            <div class="filter" [hidden]="akibashow">
+                <div class="filter-input">
+                    <input (keyup)="applyFilterAkiba($any($event.target).value)" matInput placeholder="Search" class="form-control shadow-none">
+                </div>
+            </div>
+            <div class="filter" [hidden]="tengefushow">
+                <div class="filter-input">
+                    <input (keyup)="applyFilterTengefu($any($event.target).value)" matInput placeholder="Search" class="form-control shadow-none">
+                </div>
+            </div>
+            <mat-tab-group (selectedTabChange)="onTabClick($event)">
+                <mat-tab label="MAPORI YA AKIBA"> 
+                    <mat-card-content >
+                        
+                        <mat-table [dataSource]="maporiAkibaArray" matSort #maporiAkibaSort #sortAkiba="matSort" >
+                            <ng-container matColumnDef="sn">
+                                <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                                <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="name">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Name </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="address">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Address </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="size">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Size (Km2)</mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.size}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="decl_year">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Namba ya Tangazo na Mwaka </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.decl_year}} </mat-cell>
+                            </ng-container>
+                            <!-- <ng-container matColumnDef="action">
+                                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                                <mat-cell *matCellDef="let row">
+                                        <button>
+                                            <mat-icon>visibility</mat-icon>
+                                        </button>
+                                </mat-cell>
+                            </ng-container> -->
+                            <mat-header-row *matHeaderRowDef="maporiAkibadisplayedColumns "></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: maporiAkibadisplayedColumns ;"></mat-row>
+                        </mat-table>
+                        <mat-paginator #paginatorAkiba [length]="maporiAkibaArray.data.length" [pageSizeOptions]="[5,10,15,20]" [pageIndex]="0"
+                            [pageSize]="5" showFirstLastButtons></mat-paginator>
+                
+                    </mat-card-content>
+                </mat-tab>
+                <mat-tab label="MAPORI TENGEFU"> 
+                    <mat-card-content >
+                        
+                        <mat-table [dataSource]="maporiTengefuArray" matSort #maporiTengefuSort #sortTengefu="matSort">
+                            <ng-container matColumnDef="sn">
+                                <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                                <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="name">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Name </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="address">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Address </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="size">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Size (Km2)</mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.size}} </mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="decl_year">
+                                <mat-header-cell mat-sort-header *matHeaderCellDef> Namba ya Tangazo na Mwaka </mat-header-cell>
+                                <mat-cell *matCellDef="let element"> {{element.decl_year}} </mat-cell>
+                            </ng-container>
+                            <!-- <ng-container matColumnDef="action">
+                                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                                <mat-cell *matCellDef="let row">
+                                        <button>
+                                            <mat-icon>visibility</mat-icon>
+                                        </button>
+                                </mat-cell>
+                            </ng-container> -->
+                            <mat-header-row *matHeaderRowDef="maporiTengefudisplayedColumns "></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: maporiTengefudisplayedColumns ;"></mat-row>
+                        </mat-table>
+                        <mat-paginator #paginatorTengefu [length]="maporiTengefuArray.data.length" [pageSizeOptions]="[5,10,15,20]" [pageIndex]="0"
+                            [pageSize]="5" showFirstLastButtons></mat-paginator>
+                
+                    </mat-card-content>
+                </mat-tab>
+                
+              </mat-tab-group>
+        </mat-card>
+    </div>
+</div>
+

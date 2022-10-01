@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Management Detail</h2>
+<hr />
+<div mat-dialog-content class="py-3">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="" class="w-100" alt="profile picture"
+                    onerror="this.src='/assets/images/leaders/default.png';">
+            </div>
+            <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                    <h1 class="card-title  text-uppercase text-primary"> {{row.name}}</h1>
+                    <p class="card-text text-success">Title:<span>{{row.title}}</span></p>
+                    <p class="card-text">{{row.title}}</p>
+
+                    <p class="card-text text-success">Department:</p>
+                    <p class="card-text">{{row.department}}</p>
+
+                    <p class="card-text text-success">Facebook Link:</p>
+                    <p class="card-text">{{row.facebook_link}}</p>
+
+                    <p class="card-text text-success">Instagram Link:</p>
+                    <p class="card-text">{{row.instagram_link}}</p>
+
+                    <p class="card-text text-success">Twitter Link:</p>
+                    <p class="card-text">{{row.twitter_link}}</p>
+
+                    <p class="card-text text-success">Biography:</p>
+                    <p class="card-text">{{row.biography}}</p>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-dialog-actions align="end">
+    <button class="btn btn-secondary" mat-dialog-close style="margin-right: 10px;">Cancel</button>
+</mat-dialog-actions>

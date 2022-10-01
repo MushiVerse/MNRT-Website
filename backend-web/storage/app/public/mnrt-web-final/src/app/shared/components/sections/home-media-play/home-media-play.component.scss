@@ -1,0 +1,128 @@
+@import 'src/environments/_variables';
+
+.media_row_content{
+  padding-top: 80px;
+  margin-bottom: 50px;
+}
+.media_row_title{
+  margin-bottom: 3vw; 
+  padding-top: 1vw;
+}
+.section_header_line{
+  width: 100px; 
+  border-top: 5px solid $gold_color;
+}
+
+.media_row_title{
+  font-size: 35px; 
+  color: $green_color;
+  margin: 50px 0px 50px 0px;
+  //font-family: $mnrt_font_family;
+  font-family: $Bebas_font;
+} 
+
+.media-img{
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  margin: 0px calc(3vw) calc(3vw) calc(3vw);
+}
+.media-details{
+  //margin-top: calc(2vw);
+  margin-left: calc(4vw);
+  margin-bottom: calc(4vw);
+  font-size: 20px;
+  padding: 0px calc(2vw) calc(2vw) calc(2vw);
+  //height: 350px;
+  text-align: left;
+}
+.media-details h2{
+  font-size: 30px;
+  color: $grey1_font_color;
+  //font-weight: bold;
+  font-family: $Bebas_font;
+}
+.media-details h3{
+  font-size: 20px;
+  color: $grey2_font_color;
+  //font-weight: bold;
+  font-family: $mnrt_font_family;
+}
+.media-details h4{
+  margin-top: 20px;
+  font-size: 20px;
+  color: $grey2_font_color;
+  font-weight:normal;
+}
+
+.button{
+  font-family: $mnrt_font_family;
+  background-color: $gold_color;
+  color: white ;
+  border: 1px solid $gold_color;
+  padding: 10px;
+  margin-top: 20px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0px;
+  position: relative;
+  left:    0;
+  bottom:   0;
+}
+
+.button:hover{
+  background-color: white;
+  color:$gold_color;
+  padding: 10px;
+}
+
+.close-icon{
+    color: white;
+}
+
+@media (max-width: 992px){
+  .media-img{
+    margin: 0px;
+  }
+  .media-details{
+      margin-top: calc(3vw);
+  }
+ 
+}
+.media_header_line{
+    width: 100px; 
+    border-top: 5px solid $gold_color;
+    margin: 0px;
+}
+.play-button{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 23px);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+.play-icon{
+    font-size: 70px;
+    color: white;
+    cursor: pointer;
+}
+.play-icon:hover{
+    color: $gold_color;
+}
+.play-modal-header{
+    margin-left: 30px;
+}
+.play-modal-header h2{
+    color: white;
+}
+.play-area{
+    //padding: 20px;
+}
+.modal-content{
+    background-color: $green_color;
+}

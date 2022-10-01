@@ -1,0 +1,103 @@
+<div class="row no-gutters">
+    <div class="col leveltwo-main-panel">
+        <div class="leveltwo-main-contents">
+            <h2>MALIKALE</h2>
+            <hr/>
+        </div>
+    </div>
+</div>
+<div class="row no-gutters">
+    <div class="col-12">
+        <mat-card>
+            <mat-card-header><h2>MAENEO YA MALIKALE</h2></mat-card-header>
+            <mat-card-content >
+                <div class="filter">
+                    <input (keyup)="applyFilterAkiba($any($event.target).value)" matInput placeholder="Search" class="form-control">
+                </div>
+                <mat-table [dataSource]="maeneoMalikaleArray" matSort #maeneoMalikaleSort #sortAkiba="matSort" >
+                    <ng-container matColumnDef="sn">
+                        <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                        <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="desc">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef> Description</mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.desc}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="address">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef>Address</mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="decl_year">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef> Namba ya Tangazo na Mwaka </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.decl_year}} </mat-cell>
+                    </ng-container>
+                    <!-- <ng-container matColumnDef="action">
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let row">
+                                <button>
+                                    <mat-icon>visibility</mat-icon>
+                                </button>
+                        </mat-cell>
+                    </ng-container> -->
+                    <mat-header-row *matHeaderRowDef="maeneoMalikaledisplayedColumns "></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: maeneoMalikaledisplayedColumns ;"></mat-row>
+                </mat-table>
+                <mat-paginator #paginatorAkiba [length]="maeneoMalikaleArray.data.length" [pageSizeOptions]="[5,10,15,20]" [pageIndex]="0"
+                    [pageSize]="5" showFirstLastButtons></mat-paginator>
+        
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="col-12 mt-2">
+        <mat-card>
+            <mat-card-header><h2>MAENEO YA URITHI WA DUNIA</h2></mat-card-header>
+            <mat-card-content >
+                <div class="filter">
+                    <input (keyup)="applyFilterTengefu($any($event.target).value)" matInput placeholder="Search" class="form-control">
+                </div>
+                <mat-table [dataSource]="urithiDuniaArray" matSort #urithiDuniaSort #sortTengefu="matSort">
+                    <ng-container matColumnDef="sn">
+                        <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                        <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="desc">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef> Aina ya Urithi</mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.desc}} </mat-cell>
+                    </ng-container>
+                    <!-- <ng-container matColumnDef="address">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef>Address</mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+                    </ng-container> -->
+                    <ng-container matColumnDef="decl_year">
+                        <mat-header-cell mat-sort-header *matHeaderCellDef> Tarehe ya kuingizwa kwenye urithi wa dunia </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.decl_year}} </mat-cell>
+                    </ng-container>
+                    <!-- <ng-container matColumnDef="action">
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let row">
+                                <button>
+                                    <mat-icon>visibility</mat-icon>
+                                </button>
+                        </mat-cell>
+                    </ng-container> -->
+                    <mat-header-row *matHeaderRowDef="urithiDuniadisplayedColumns "></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: urithiDuniadisplayedColumns ;"></mat-row>
+                </mat-table>
+                <mat-paginator #paginatorTengefu [length]="urithiDuniaArray.data.length" [pageSizeOptions]="[5,10,15,20]" [pageIndex]="0"
+                    [pageSize]="10" showFirstLastButtons></mat-paginator>
+        
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>
+

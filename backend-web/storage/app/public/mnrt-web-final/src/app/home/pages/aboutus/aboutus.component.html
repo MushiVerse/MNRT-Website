@@ -1,0 +1,65 @@
+<!-- <div class="row no-gutters section_row">
+    <div class="section_row_title">
+        <h2>About Us</h2>
+        <hr class="section_header_line" />
+    </div>
+</div> -->
+<div class="row no-gutters aboutus-row" *transloco="let t">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="aboutus-col">
+            <div class="aboutus-header">
+                <h2>{{'about.MISSION' | transloco}}</h2>
+            </div>
+            <div class="aboutus-text">
+                <h3><strong>&ldquo;</strong>{{'about.MAELEZO1' | transloco}}<strong>&rdquo;</strong></h3>
+            </div>
+        </div>
+        <div class="aboutus-col">
+            <div class="aboutus-header">
+                <h2>{{'about.VISION' | transloco}}</h2>
+            </div>
+            <div class="aboutus-text">
+                <h3><strong>&ldquo;</strong>{{'about.MAELEZO2' | transloco}}<strong>&rdquo;</strong></h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="aboutus-col">
+            
+            <div class="resources-container">
+                <div class="resources-header">
+                    <h2>{{'about.RSC' | transloco}}</h2>
+                </div>
+                <div class="resources-details">
+                    <div class="resources-title" routerLink="/resources/actsandpolicies" >
+                        <h2>{{'about.ACT' | transloco}}</h2>
+                    </div>
+                    <hr/>
+                    <div class="resources-title" routerLink="/resources/lawsandregulations" >
+                        <h2>{{'about.LAWS' | transloco}}</h2>
+                    </div>
+                    <hr/>
+                    <div class="resources-title" routerLink="/resources/reportsandbudgets" >
+                        <h2>{{'about.REPO' | transloco}}</h2>
+                    </div>
+                    <hr/>
+                    <div class="resources-title" routerLink="/resources/documentandforms" >
+                        
+                        <h2>{{'about.DOC' | transloco}}</h2>
+                    </div>
+                    <hr/>
+                    <!-- <div class="resources-title" routerLink="/resources/resourcessandprograms" >
+                        
+                        <h2>{{'about.PROJE' | transloco}}</h2>
+                    </div>
+                    <hr/> -->
+                    <div class="resources-title" routerLink="/resources/otherpublications" >
+                        
+                        <h2>{{'about.PUB' | transloco}}</h2>
+                    </div>
+                </div>
+            
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,93 @@
+@import 'src/environments/_variables';
+
+.row{
+    padding: 80px 0px 10px 0px;
+    background-color: whitesmoke;
+}
+.project-col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 10% !important;
+}
+.section_row_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    //padding-left: 30px;
+    
+        h2{
+            font-size: 35px; 
+            color: $grey2_font_color;
+            //padding: 60px 0px 3px 0px;
+            //font-family: $mnrt_font_family;
+            font-family: $Bebas_font;
+        }
+    } 
+
+.section_header_line{
+    width: 80px; 
+    border-top: 5px solid $gold_color;
+    margin-left: 0;
+    margin-top: 0;
+    }
+
+.project-all{
+    padding-bottom: 60px;
+    width: 90%;
+}
+    
+.project{
+    margin: 10px 0 20px 0;
+    cursor: pointer;
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.space{
+    flex: 1 1 auto;
+}
+.arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    columns: $gold_color;
+}
+.project-title{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    mat-icon{
+        margin-top: 5px; 
+        color: $gold_color !important;
+    }
+}
+.project-date{
+    //padding-left: 30px;
+    h2{
+        color: gray !important;
+    }
+}
+
+
+.button{
+    font-family: $mnrt_font_family;
+    color: $gold_color ;
+    border: 1px solid $gold_color;
+    padding: 10px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0px;
+    background: none;
+    margin-right: 0;
+  }
+  
+  .button:hover{
+    background-color: $gold_color;
+    color: white;
+  }

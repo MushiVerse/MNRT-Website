@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Contact Detail</h2>
+<hr />
+<div mat-dialog-content class="py-3">
+    <div class="card">
+        <div class="row">
+            
+            <div class="col-md-12 px-3">
+                <div class="card-block px-3">
+                    <h1 class="card-title"> <strong>{{row.contact_des}}</strong></h1>
+                    <h3><strong>{{row.category}}</strong></h3>
+                    <p class="card-text">mobile</p>
+                    <p class="card-text">{{row.mobile}}</p>
+                    <p class="card-text">email</p>
+                    <p class="card-text">{{row.email}}</p>
+                    <p class="card-text">fax</p>
+                    <p class="card-text">{{row.fax}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-dialog-actions align="end">
+    <button class="btn btn-secondary" mat-dialog-close style="margin-right: 10px;">Cancel</button>
+</mat-dialog-actions>

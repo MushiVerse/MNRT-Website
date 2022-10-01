@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>News Detail</h2>
+<hr />
+<div mat-dialog-content class="py-3">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{row.picture}}" class="w-100" alt="profile picture" onerror="this.src='/assets/images/news/news1.jpg';">
+            </div>
+            <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                    <h1 class="card-title"> <strong>{{row.news_des}}</strong></h1>
+                    <h3><strong>{{row.news_title}}</strong>(From: {{row.pub_date}} To: {{row.exp_date}})</h3>
+                    <!--<p class="card-text">Biography</p>
+                    <p class="card-text">{{row.biography}}</p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-dialog-actions align="end">
+    <button class="btn btn-secondary" mat-dialog-close style="margin-right: 10px;">Cancel</button>
+</mat-dialog-actions>

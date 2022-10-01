@@ -1,0 +1,70 @@
+<mat-card>
+    <div class="heading">
+        <h2>Sub Sectors</h2>
+        <hr />
+    </div>
+    <mat-card-content>
+        <div>
+            <button class="add" mat-button (click)="onAdd()">
+                <mat-icon style="font-size: xx-large !important;">add_circle</mat-icon>
+            </button>
+        </div>
+        <div class="filter">
+            <input matInput placeholder="Filter" class="form-control">
+        </div>
+        <mat-table matSort #newstable>
+            <ng-container matColumnDef="sn">
+                <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                <mat-cell> 1 </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="subsector_pic">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Image</mat-header-cell>
+                <mat-cell >
+                    <img src="" width="180px" height="100px">
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="subsector_title">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Title <br/>Date </mat-header-cell>
+                <mat-cell > tt <br/><br/>666</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="subsector_des">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Description </mat-header-cell>
+                <mat-cell >ytvff </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="id">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> New ID </mat-header-cell>
+                <mat-cell > 8</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <mat-icon [matMenuTriggerFor]="menu" style="cursor: pointer;">more_vert</mat-icon>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>visibility</mat-icon>
+                            <span>View</span>
+                        </button>
+                        <button mat-menu-item >
+                            <mat-icon style="color: red !important;">delete</mat-icon>
+                            <span>Delete</span>
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>update</mat-icon>
+                            <span>Update</span>
+                        </button>
+                    </mat-menu>
+
+                    <!-- <button type="button" mat-icon-button color="warn" title="delete"
+                (click)="onSchoolDeleted(element.schoolName)">
+                <mat-icon>delete_outline</mat-icon>
+                </button> -->
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="subsectorsdisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: subsectorsdisplayedColumns;"></mat-row>
+        </mat-table>
+        <mat-paginator [pageSizeOptions]="[5,10,15,20]" [pageIndex]="0"
+            [pageSize]="10" showFirstLastButtons></mat-paginator>
+    </mat-card-content>
+</mat-card>

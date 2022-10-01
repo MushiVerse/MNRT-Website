@@ -1,0 +1,126 @@
+{
+    "nav":{
+        "TZ":"JAMUHURI YA MUUNGANO WA TANZANIA",
+        "MNRANDT":"WIZARA YA MALIASILI NA UTALII",
+        "MNR": "WIZARA YA MALIASILI",
+        "ANDT": "NA UTALII",
+        "MN": "MENYU",
+        "SRCH": "Tafuta",
+        "CLS": "Funga",
+        "SCTRS": "SEKTA",
+        "WLD": "Wanyamapori",
+        "TRSM": "Utalii",
+        "FRST": "Misitu na Nyuki",
+        "ANTQ": "Malikale",
+        "BEE": "Ufugaji Nyuki",
+        "CRS": "Mambo Mtambuko",
+        "STK": "WADAU",
+        "STK1": "Waendeshaji wa Ziara",
+        "STK2": "Makampuni ya Uwindaji",
+        "RSC": "MACHAPISHO",
+        "RSC1": "Sheria na Sera",
+        "RSC2": "Sheria na Kanuni",
+        "ABT": "Kuhusu",
+        "NWS": "Habari",
+        "CONT": "Mawasiliano",
+        "WHAT": "NINI MPYA",
+        "NWSEVT": "Habari na Matukio",
+        "PRESS": "Matoleo kwa Vyombo vya Habari",
+        "TENDER": "Zabuni na Nafasi za Kazi",
+        "CMPNS": "Kampeni",
+        "GLRY": "Matunzio",
+        "CROSS": "VITENGO",
+        "ICT": "TEHAMA",
+        "LGL": "Sheria",
+        "PROC": "Ugavi",
+        "ACCNT": "Uhasibu na Uchumi",
+        "HR": "Utawala na Utumishi",
+        "COM": "Mawasiliano",
+        "PARA": "Jeshi usu",
+        "ABTUS": "KUHUSU SISI",
+        "OVERV": "Muhtasari wa Wizara",
+        "ORG": "Muundo wa Shirika",
+        "EX": "Watendaji",
+        "MGT": "Usimamizi",
+        "CONTD": "Mawasiliano",
+        "REPO": "Ripoti na Bajeti",
+        "DOCU": "Nyaraka na Fomu",
+        "PROJE": "Miradi na Mipango",
+        "PUB":"Machapisho Mengine",
+        "TROPHY": "Wafanyabiashara wa Nyara",
+        "LICENSED": "Watafiti wenye Leseni",
+        "EXPORT": "Wasafirishaji wa Bidhaa za Misitu",
+        "SRV": "Huduma",
+        "FEE": "Ada, Tozo na Ushuru",
+        "GRD": "Uanishaji wa Hoteli na upangaji",
+        "BLOCK": "Maombi ya Vitalu vya uwindaji",
+        "TOL": "Leseni ya Waendeshaji wa Utalii",
+        "TDL": "Leseni ya Kushughulikia Nyara",
+        "SYS": "Mifumo",
+        "MAIL": "Barua Pepep",
+        "STKH": "Wadau"
+
+
+    },
+
+    "about":{
+        "MISSION": "DHIMA YETU",
+        "MAELEZO1": "Uhifadhi endelevu wa maliasili na utamaduni na maendeleo ya utalii unaowajibika",
+        "VISION": "DIRA YETU",
+        "MAELEZO2": "Kuhifadhi maliasili, kiutamaduni kwa uendelevu na kuendeleza utalii kwa ustawi wa taifa na manufaa ya wanadamu kupitia uundaji wa sera, mikakati na miongozo ifaayo; uundaji na utekelezaji wa sheria na kanuni; ufuatiliaji na tathmini ya sera na sheria",
+        "RSC": "MACHAPISHO",
+        "ACT": "Sheria na Sera",
+        "LAWS": "Sheria na Kanuni",
+        "REPO": "Ripoti na Bajeti",
+        "DOC": "Nyaraka na Fomu",
+        "PROJE": "Miradi na Mipango",
+        "PUB": "Machapisho Mengine"
+    },
+
+    "habari":{
+        "KICHWA": "HABARI MPYA",
+        "ZAIDI": "SOMA ZAIDI",
+        "EXEC": "WATENDAJI"
+
+    },
+
+    "vijisekta":{
+        "KICHWA2": "SEKTA NDOGO",
+        "TOU": "UTALII",
+        "WILD": "WANYAMAPORI",
+        "ANTIQ": "MALIKALE",
+        "FORBEE": "MISITU NA NYUKI"
+
+    },
+    "stat":{
+        "KICHWA3": "VIVUTIO"
+        
+    },
+    "miradi": {
+        "KICHWA4": "MIRADI NA PROGRAMU",
+        "ZAIDI": "TAZAMA ZAIDI"
+    },
+    "slider": {
+        "TRSM": "UTALII",
+        "WILD": "WANYAMAPORI",
+        "FORBEE":"MISITU NA NYUKI",
+        "ANTI": "MALIKALE"
+    },
+    "aboutlevel2": {
+        "MOVER": "MUHTASARI WA WIZARA",
+        "VIS": "DIRA",
+        "MAELEZO2": "Kuhifadhi maliasili, kiutamaduni kwa uendelevu na kuendeleza utalii kwa ustawi wa taifa na manufaa ya wanadamu kupitia uundaji wa sera, mikakati na miongozo ifaayo; uundaji na utekelezaji wa sheria na kanuni; ufuatiliaji na tathmini ya sera na sheria",
+        "MIS": "DHIMA",
+        "MAELEZO1": "Uhifadhi endelevu wa maliasili na utamaduni na maendeleo ya utalii unaowajibika",
+        "MINI": "WIZARA",
+        "MAELEZO3": "Wizara ya Maliasili na Utalii ya Jamhuri ya Muungano wa Tanzania, ndiyo Wizara yenye dhamana ya usimamizi wa maliasili, Utamaduni na Utalii. Tanzania ina uwezo mkubwa wa maliasili, vivutio vya kitamaduni na utalii. Kwa upande wa wanyamapori, mtandao wa sasa wa Maeneo Tengefu ya Wanyamapori (PAs) nchini Tanzania unajumuisha Hifadhi za Taifa 16, Hifadhi ya Ngorongoro, Mapori ya Akiba 38 na Mapori Tengefu 43. Mtandao wa eneo linalolindwa na wanyamapori unashughulikia Sq 307,800. Km (32.5%) ya ardhi yote ya Tanzania",
+        "HIST": "HISTORIA YA WIZARA"
+    },
+    "orgs": {
+        "ORG": "MUUNDO WA WIZARA",
+        "DOWN": "Pakua"
+
+    }
+
+    
+}

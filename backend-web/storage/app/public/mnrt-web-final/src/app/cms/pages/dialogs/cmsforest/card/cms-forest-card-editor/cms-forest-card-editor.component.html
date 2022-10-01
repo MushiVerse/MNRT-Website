@@ -1,0 +1,61 @@
+<mat-card>
+    <div class="heading">
+        <h2>Forest Card Contents</h2>
+        <hr />
+    </div>
+    <mat-card-content>
+       
+        <div class="filter">
+            <input (keyup)="applyFilter($any($event.target).value)" matInput placeholder="Filter" class="form-control">
+        </div>
+        <mat-table [dataSource]="newsArray" matSort #newstable>
+            <ng-container matColumnDef="sn">
+                <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="Card_image">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Image</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <img src="{{element.card_img}}" width="180px" height="100px">
+                </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="Card_link">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Link </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.card_link}} </mat-cell>
+            </ng-container>
+            
+          
+            <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <mat-icon [matMenuTriggerFor]="menu" style="cursor: pointer;">more_vert</mat-icon>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="onView(row)">
+                            <mat-icon>visibility</mat-icon>
+                            <span>View</span>
+                        </button>
+                        <!-- <button mat-menu-item (click)="onDelete(row)">
+                            <mat-icon style="color: red !important;">delete</mat-icon>
+                            <span>Delete</span>
+                        </button> -->
+                        <button mat-menu-item (click)="onUpdate(row)">
+                            <mat-icon>update</mat-icon>
+                            <span>Update</span>
+                        </button>
+                    </mat-menu>
+
+                    <!-- <button type="button" mat-icon-button color="warn" title="delete"
+                (click)="onSchoolDeleted(element.schoolName)">
+                <mat-icon>delete_outline</mat-icon>
+                </button> -->
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="newsdisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: newsdisplayedColumns;"></mat-row>
+        </mat-table>
+        <mat-paginator [length]="newsArray.data.length" [pageSizeOptions]="[5,10,15,20]" [pageIndex]="0"
+            [pageSize]="10" showFirstLastButtons></mat-paginator>
+
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,21 @@
+<div class="row no-gutters">
+    <div class="col leveltwo-main-panel">
+        <div class="leveltwo-main-contents">
+            <h2>MANAGEMENT</h2>
+            <hr/>
+        </div>
+    </div>
+</div>
+<div class="row no-gutters row-details">
+    <div class="col-lg-3 col-md-3" *ngFor="let management of management_list">
+        <div class="leader-container">
+            <div class="img-container" style="background-image: url('{{management.picture}}');">
+                <!-- <div  class="link-img"></div> -->
+                <div class="link-content" >
+                    <h4>{{management.name}}</h4>
+                    <h5>{{management.title}}</h5>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>

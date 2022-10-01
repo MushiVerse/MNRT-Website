@@ -1,0 +1,124 @@
+@import 'src/environments/_variables';
+
+
+
+//-------- our sections
+.section_row{
+    width: 100%;
+    height: calc(120px + 5vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    padding-top: 20px;
+}
+
+.statistics_row{
+    //margin: 60px 30px 60px 30px;
+    background-color: white;
+    width: 100%;
+    padding:0px 10% 100px 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+  
+.section_row_title{
+
+    h2{
+        font-size: 35px; 
+        color: $grey2_font_color;
+        font-family: $Bebas_font;
+    }
+} 
+
+.section_header_line{
+    width: 80px; 
+    border-top: 5px solid $gold_color;
+  }
+
+
+.img-container{
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: calc(100% - 2px);
+    height: calc(150px + 8vw);
+    cursor: pointer;
+    
+
+    .link-content{
+        width: 100%;
+        height: 60px;
+        background-color:$gold-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in-out;
+        
+        h4{
+            margin: 0;
+            //font-family: $mnrt_font_family;
+            font-family: $Bebas_font;
+            color: white;
+            font-size: 1.8rem;
+            //font-weight: bold;
+        }
+    }
+}
+.img-container:hover{
+    // transition: 0.5s;
+    // transform: scale(1.05);
+    .link-content{
+        width: 100%;
+        height: 100%;
+        transition: 0.3s ease-in-out;
+        background-color:rgb(219, 175, 28, 0.5);
+    }
+}
+
+// .link-img{
+//     // background-position: 50% 50%;
+//     // background-repeat: no-repeat;
+//     // background-size: cover;
+//     // height: 350px;
+//     // width: 100%;
+//     padding: 2px !important;
+// }
+
+.button{
+    font-family: $mnrt_font_family;
+    color: $gold_color ;
+    border: 1px solid $gold_color;
+    padding: 15px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0px;
+    background: none;
+  }
+  
+  .button:hover{
+    background-color: $gold_color;
+    color: white;
+  }
+
+  .more-statistics{
+      width: 100%;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-end!important;
+      margin: 10px;
+      margin-right: 50px;
+  }
+
+  @media (max-width: 992px){
+    .img-container{
+        height: calc(180px + 8vw);
+    }
+  }

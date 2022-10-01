@@ -1,0 +1,29 @@
+ <!-- spinner -->
+ <div class="spinner-container">
+    <div *ngIf="spinner.isCMSLoading | async">
+        <mat-progress-bar mode="indeterminate" style="color: goldenrod;"></mat-progress-bar>
+        <!-- <mat-spinner style="top: 50%; left: 50%;"></mat-spinner> -->
+        <!-- <div class="lds-default position"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> -->
+    </div>
+  </div>
+  
+
+<mat-toolbar class="mat-elevation-z8">
+    <div class="logo-image d-none d-md-block">
+        <img src="/assets/images/logo.png" alt="" class="log-img">
+    </div>
+      MNRT WEB ADMIN
+    <span class="example-spacer"></span>
+    <div class="menu">
+        <a [routerLink]="['/cms']" mat-button>
+            <span>Login</span>
+        </a>
+        <a [routerLink]="['/cms/register']" mat-button>
+            <span>Register</span>
+        </a>
+    </div>
+            
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+

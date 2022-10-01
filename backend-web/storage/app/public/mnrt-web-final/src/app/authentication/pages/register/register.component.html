@@ -1,0 +1,46 @@
+<div class="register-content">
+    <div class="register-form">
+      <form [formGroup]="RegisterForm">
+        <div class="form-header">
+          REGISTER
+        </div>
+        <div class="form-group col-lg-12 col-sm-12 form-input">
+          <div class="form-row">
+            <div class="form-group col">
+              <label>Name</label>
+              <input type="text" class="form-control form-control-sm" formControlName="name" placeholder="Enter Name">
+              <small><div *ngIf="RegisterForm.get('name')?.touched && RegisterForm.get('name')?.invalid" class="text-danger">Name is required</div></small>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <label>Email</label>
+              <input type="text" class="form-control form-control-sm" formControlName="email" placeholder="Enter Email">
+              <small><div *ngIf="RegisterForm.get('email')?.touched && RegisterForm.get('email')?.invalid" class="text-danger">Enter valid email</div></small>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <label>Password</label>
+              <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Enter Password">
+              <small><div *ngIf="RegisterForm.get('password')?.touched && RegisterForm.get('password')?.invalid" class="text-danger">Password is required</div></small>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <label>Confirm Password</label>
+              <input type="password" class="form-control form-control-sm" formControlName="password2" placeholder="Confirm Password">
+              <small><div *ngIf="RegisterForm.get('password2')?.touched && RegisterForm.get('password2')?.invalid" class="text-danger">Confirm your password</div></small>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <button [disabled]="RegisterForm.invalid" type="submit" class="form-control btn btn-success" (click)="onSubmit()">Register</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- 
+  [disabled]="RegisterForm.invalid"  -->

@@ -1,0 +1,36 @@
+.login-content{
+  position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+.login-form{
+  margin-top: calc(50vh - 200px);
+  width: 400px;
+  background: white;
+}
+.form-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #135029;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}
+.btn-success{
+  background: #135029 !important;
+}
+.form-input{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    margin:20px 0 20px 0 ;
+    font-size: 18px;
+}

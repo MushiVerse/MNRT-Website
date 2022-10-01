@@ -1,0 +1,75 @@
+<mat-card>
+    <div class="heading">
+        <h2>Contacts</h2>
+        <hr />
+    </div>
+    <mat-card-content>
+        <div>
+            <button class="add" mat-button (click)="onAdd()">
+                <mat-icon style="font-size: xx-large !important;">add_circle</mat-icon>
+            </button>
+            <!-- <button mat-button (click)="onTestButton()">test</button> -->
+        </div>
+        <div class="filter">
+            <input (keyup)="applyFilter($any($event.target).value)" matInput placeholder="Filter" class="form-control">
+        </div>
+        <mat-table [dataSource]="contactsArray" matSort #contactstable>
+            <ng-container matColumnDef="sn">
+                <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="contact_des">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Contact description </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.contact_des}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="category">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Category </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="mobile">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> mobile </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.mobile}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="email">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> email </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="fax">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> fax </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.fax}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <mat-icon [matMenuTriggerFor]="menu" style="cursor: pointer;">more_vert</mat-icon>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="onView(row)">
+                            <mat-icon>visibility</mat-icon>
+                            <span>View</span>
+                        </button>
+                        <button mat-menu-item (click)="onDelete(row)">
+                            <mat-icon style="color: red !important;">delete</mat-icon>
+                            <span>Delete</span>
+                        </button>
+                        <button mat-menu-item (click)="onUpdate(row)">
+                            <mat-icon>update</mat-icon>
+                            <span>Update</span>
+                        </button>
+                    </mat-menu>
+
+                    <!-- <button type="button" mat-icon-button color="warn" title="delete"
+                (click)="onSchoolDeleted(element.schoolName)">
+                <mat-icon>delete_outline</mat-icon>
+                </button> -->
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="contactsdisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: contactsdisplayedColumns;"></mat-row>
+        </mat-table>
+        <mat-paginator [length]="contactsArray.data.length" [pageSizeOptions]="[5,10,15,20]" [pageIndex]="0"
+            [pageSize]="10" showFirstLastButtons></mat-paginator>
+
+    </mat-card-content>
+</mat-card>

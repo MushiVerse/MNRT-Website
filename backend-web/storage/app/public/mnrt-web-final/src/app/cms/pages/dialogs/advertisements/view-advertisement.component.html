@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Advertisement Detail</h2>
+<hr />
+<div mat-dialog-content class="py-3">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{row.attachment}}" class="w-100" alt="Advertisement attachment" onerror="this.src='/assets/images/advertisements/default.jpg';">
+            </div>
+            <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                    <h2 class="card-title  text-uppercase text-primary"> {{row.adv_title}}</h2>
+                    
+                    <p class="card-text text-success">Description</p>
+                    <p class="card-text">{{row.adv_des}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-dialog-actions align="end">
+    <button class="btn btn-secondary" mat-dialog-close style="margin-right: 10px;">Cancel</button>
+</mat-dialog-actions>

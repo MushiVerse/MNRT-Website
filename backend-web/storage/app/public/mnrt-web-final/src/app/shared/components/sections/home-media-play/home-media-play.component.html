@@ -1,0 +1,59 @@
+<div style="width: 100%;">
+    <div class="row no-gutters media_row_content">
+      <div class="col-lg-5 col-md-12 col-sm-12">
+          <div style="background-image: url('{{media.media_img}}'); " class="media-img">
+              <div class="play-button" data-toggle="modal" data-target="#mediaPlayModal" >
+                <mat-icon class="play-icon" onClick="document.getElementById('tourism_video').play()">play_circle_filled</mat-icon></div>
+          </div>
+      </div>
+      <div class="col-lg-7 col-md-12 col-sm-12">
+          <div class="media-details">
+              <h2>{{media.media_title}}</h2>
+              <hr class="media_header_line" />
+              <h4>
+                {{media.media_desc}}
+              </h4>
+              <button mat-flat-button class="button" data-toggle="modal" data-target="#mediaPlayModal" onClick="document.getElementById('tourism_video').play()">WATCH</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- MediaPlay Modal -->
+<div class="modal fade modal-fullscreen" data-keyboard="false" data-backdrop="static" id="mediaPlayModal" tabindex="-1" role="dialog" aria-labelledby="mediaPlayModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-bg">
+        <div class="modal-content rounded-0">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="document.getElementById('tourism_video').pause()">
+              <mat-icon  class="close-icon">close</mat-icon>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row search-search-row" >
+              <!-- <div class="col-lg-12" >
+                  <div class="play-modal-header">
+                    <h2>{{media.media_title}}</h2>
+                    <hr class="media_header_line" />
+                  </div>
+              </div> -->
+              <div class="col-lg-12">  
+                <div class="play-area" >
+                    <!-- <div class="media-img"></div> -->
+                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                        <video controls="true" class="embed-responsive-item" id="tourism_video" >
+                            <source src="{{media.media_video}}" type="video/mp4" />
+                            
+                        </video>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

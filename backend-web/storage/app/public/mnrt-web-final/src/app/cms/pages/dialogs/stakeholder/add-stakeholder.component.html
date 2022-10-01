@@ -1,0 +1,143 @@
+<form [formGroup]="StakeholderForm">
+    <h2 mat-dialog-title>New Stakeholder</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <div class="form-group col-3">
+                <!--<img src="" class="w-100" alt="profile picture"
+                    onerror="this.src='/assets/images/leaders/default.png';">
+                <button class="btn btn-secondary">Upload Photo</button>-->
+            </div>
+            <div class="form-group col-9">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Name</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="sthdr_name"
+                            placeholder="Enter Name">
+                        <div *ngIf="StakeholderForm.get('sthdr_name')?.touched && StakeholderForm.get('sthdr_name')?.invalid"
+                            class="text-danger">Name is required</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Category</label>
+                        <select formControlName="category" class="form-control form-control-sm">
+                          <option *ngFor="let category of categorys" value="{{category.value}}" [selected]="category.selected == true">{{category.text}}</option>
+                        </select>
+                        <div *ngIf="StakeholderForm.get('category')?.touched && StakeholderForm.get('category')?.invalid"
+                            class="text-danger">Category is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Phone</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="phone"
+                            placeholder="Enter phone">
+                        <div *ngIf="StakeholderForm.get('phone')?.touched && StakeholderForm.get('phone')?.invalid"
+                            class="text-danger">Phone is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Email</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="email"
+                            placeholder="Enter Email">
+                        <div *ngIf="StakeholderForm.get('email')?.touched && StakeholderForm.get('email')?.invalid"
+                            class="text-danger">Email is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Postal Address</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="postal_address"
+                            placeholder="Enter Postal address">
+                        <div *ngIf="StakeholderForm.get('postal_address')?.touched && StakeholderForm.get('postal_address')?.invalid"
+                            class="text-danger">Twitter Link is required</div>
+                      </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Physical Address</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="physical_address"
+                            placeholder="Enter Physical Address">
+                        <div *ngIf="StakeholderForm.get('physical_address')?.touched && StakeholderForm.get('physical_address')?.invalid"
+                            class="text-danger">Physical Address is required</div>
+                      </div>
+                </div>
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="title"
+                            placeholder="Enter Title">
+                        <div *ngIf="StakeholderForm.get('title')?.touched && StakeholderForm.get('title')?.invalid"
+                            class="text-danger">Title is required</div>
+                    </div>
+                </div>-->
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title Start</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="start_date">
+                        <div *ngIf="StakeholderForm.get('start_date')?.touched && StakeholderForm.get('start_date')?.invalid"
+                            class="text-danger">Start date is required</div>
+                    </div>
+                    <div class="form-group col">
+                        <label>Title End</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="start_end" >
+                    </div>
+                </div>-->
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="start_date" ngbDatepicker #d1="ngbDatepicker" [startDate]="fromDate!">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d1.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                        <div *ngIf="StakeholderForm.get('start_date')?.touched && StakeholderForm.get('start_date')?.invalid"
+                            class="text-danger">Start date is required</div>
+                      </div>
+                      <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="end_date" ngbDatepicker #d2="ngbDatepicker">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                      </div>
+                </div>-->
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>country</label>
+                        <textarea class="form-control form-control-sm" formControlName="country"
+                            placeholder="Enter Name"></textarea>
+                        <div *ngIf="StakeholderForm.get('country')?.touched && StakeholderForm.get('country')?.invalid"
+                            class="text-danger">Country is required</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>website</label>
+                        <textarea class="form-control form-control-sm" formControlName="website"
+                            placeholder="Enter Website"></textarea>
+                        <div *ngIf="StakeholderForm.get('website')?.touched && StakeholderForm.get('website')?.invalid"
+                            class="text-danger">Website is required</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button [disabled]="StakeholderForm.invalid" type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>

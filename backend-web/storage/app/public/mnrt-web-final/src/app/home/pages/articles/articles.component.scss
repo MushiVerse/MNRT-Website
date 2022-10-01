@@ -1,0 +1,35 @@
+.article-img{
+    background-image: url('/assets/images/david-clode-nyvR6wbU1ho-unsplash.jpg'); 
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(45vw * 1.5);
+    margin: calc(5vw);
+}
+.article-details{
+    margin-top: calc(2vw);
+    margin-left: calc(2vw);
+    margin-bottom: calc(4vw);
+    font-size: 20px;
+
+}
+.article-details h2{
+    font-size: 30px;
+    color: darkgreen;
+    font-weight: bolder;
+}
+.article-details h4{
+    font-size: 20px;
+    color: darkgreen;
+    font-weight:normal;
+}
+
+@media (min-width: 992px){
+    .article-img {
+        height: calc(25vw);
+        margin: calc(3vw);
+    }
+    .article-details{
+        margin-top: calc(3vw);
+    }
+}

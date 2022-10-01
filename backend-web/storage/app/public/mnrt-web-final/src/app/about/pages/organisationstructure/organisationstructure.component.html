@@ -1,0 +1,21 @@
+<div class="row no-gutters" *transloco="let t" >
+    <div class="col leveltwo-main-panel">
+        <div class="leveltwo-main-contents">
+            <h2>{{'orgs.ORG' | transloco}}</h2>
+            <hr />
+        </div>
+    </div>
+</div>
+<div class="row no-gutters">
+    <div class="col">
+        <div class="pdf-content">
+            <div class="pdf-main">
+                <pdf-viewer [src]="pdfFilePath" [render-text]="true" class="pdf">
+                </pdf-viewer>
+            </div>
+            <div class="pdf-download">
+                <a target="true" href="/assets/attachments/organisation_structure.pdf">{{'orgs.DOWN' | transloco}}</a>
+            </div>
+        </div>
+    </div>
+</div>

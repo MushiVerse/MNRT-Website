@@ -1,0 +1,38 @@
+<form [formGroup]="NewForm">
+    <h2 mat-dialog-title>Update Tourism About Contents</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <div class="form-group col-lg-3 col-sm-3">
+                <img [src]="image_linkurl" class="w-100" alt="profile picture"
+                    onerror="this.src='/assets/images/leaders/default.png';">
+                    <input type="file" class="file-upload" (change)="onFileSelected($event)" accept="image/jpeg"> 
+            </div>
+            <div class="form-group col-lg-9 col-sm-12">
+                
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>description</label>
+                            <textarea class="form-control form-control-sm" formControlName="about_description"
+                            placeholder="Enter About_description"></textarea>
+                        <div *ngIf="NewForm.get('about_description')?.touched && NewForm.get('about_description')?.invalid"
+                            class="text-danger">description is required</div>
+                    </div>
+                </div>
+               
+                
+               
+            </div>
+        </div>
+
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button  class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>
+
+<!-- [disabled]="NewForm.invalid"  -->

@@ -1,0 +1,142 @@
+@import 'src/environments/_variables';
+
+.link-img{
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+    //border-radius: 0 0 70% 0%/0 0 50% 0;
+    
+}
+.quick-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.quick-container{
+    width: 90%;
+    min-height: 600px;
+    height: 100%;
+    
+}
+.links-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+
+    h2{
+        font-size: 20px; 
+        color: $grey2_font_color;
+        padding: 10px 0px 0px 0px;
+        //font-family: $mnrt_font_family;
+        font-family: $Bebas_font;
+    }
+
+    hr{
+        width: 50px; 
+        border-top: 5px solid $gold_color;
+        margin-left: 0;
+        margin-top: -10px;
+    }
+}
+.links-details{
+    hr{
+        margin-top: 0px;
+    }
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    cursor: pointer;
+    padding-left: 10px;
+    mat-icon{
+        margin-top: 5px; 
+        color: $gold_color !important;
+    }
+    h2{
+        font-size: 15px;
+    }
+}
+
+.mat-tab-label {
+    width: 33%;
+}
+
+// tabs
+/* Tabs Card */
+
+
+.tab-card {
+    border:1px solid #eee;
+  }
+  
+  .tab-card-header {
+    background:none;
+  }
+  /* Default mode */
+  .tab-card-header > .nav-tabs {
+    border: none;
+    margin: 0px;
+    padding: auto !important;
+  }
+  .tab-card-header > .nav-tabs > li {
+    margin-right: 2px;
+  }
+  .tab-card-header > .nav-tabs > li > a {
+    border: 0;
+    border-bottom:2px solid transparent;
+    margin-right: 0;
+    color: #737373;
+    padding: 2px 15px;
+  }
+  
+  .tab-card-header > .nav-tabs > li > a.show {
+      border-bottom:2px solid #007bff;
+      color: #007bff;
+  }
+  .tab-card-header > .nav-tabs > li > a:hover {
+      color: #007bff;
+  }
+  
+  .tab-card-header > .tab-content {
+    padding-bottom: 0;
+  }
+
+//-------------------news 
+.resources-container{
+    width: 100%;
+    //border: 1px solid $gold_color;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 0px 20px 0px;
+    padding-top: 10px;
+}
+.resources-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    background: $gold_color;
+    padding: 8px;
+    h2{
+        font-size: 25px;
+        font-family: $Bebas_font;
+        margin: 0;
+        padding: 0;
+    }
+}
+.resources-details{
+    text-align: left;
+    //padding: 20px;
+
+    hr{
+        margin-top: 0;
+    }
+}

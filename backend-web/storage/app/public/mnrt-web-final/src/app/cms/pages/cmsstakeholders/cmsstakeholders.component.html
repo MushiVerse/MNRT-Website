@@ -1,0 +1,89 @@
+<mat-card>
+    <div class="heading">
+        <h2>Stakeholder</h2>
+        <hr />
+    </div>
+    <mat-card-content>
+        <div>
+            <button class="add" mat-button (click)="onAdd()">
+                <mat-icon style="font-size: xx-large !important;">add_circle</mat-icon>
+            </button>
+        </div>
+        <div class="filter">
+            <input (keyup)="applyFilter($any($event.target).value)" matInput placeholder="Filter" class="form-control">
+        </div>
+        <mat-table [dataSource]="stakeholderArray" matSort #stakeholdertable>
+            <ng-container matColumnDef="sn">
+                <mat-header-cell *matHeaderCellDef> SN </mat-header-cell>
+                <mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </mat-cell>
+            </ng-container>
+            <!--<ng-container matColumnDef="sthdr_name">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Stakeholder Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> 
+                    <img src="{{element.sthdr_name}}" width="100px" height="100px">
+                </mat-cell>
+            </ng-container>-->
+            <ng-container matColumnDef="sthdr_name">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Stakeholder Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.sthdr_name}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="category">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Category </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
+            </ng-container>
+            <!--<ng-container matColumnDef="phone">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Phone </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.phone}} </mat-cell>
+            </ng-container>-->
+            <ng-container matColumnDef="email">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> email </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="postal_address">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Postal Address </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.postal_address}} </mat-cell>
+            </ng-container>
+
+            <!--<ng-container matColumnDef="physical_address">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>Physical Address </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.physical_address}} </mat-cell>
+            </ng-container>-->
+            
+            <ng-container matColumnDef="country">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Country </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.country}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="website">
+                <mat-header-cell mat-sort-header *matHeaderCellDef> Website </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.website}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <mat-icon [matMenuTriggerFor]="menu" style="cursor: pointer;">more_vert</mat-icon>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="onView(row)">
+                            <mat-icon>visibility</mat-icon>
+                            <span>View</span>
+                        </button>
+                        <button mat-menu-item (click)="onDelete(row)">
+                            <mat-icon style="color: red !important;">delete</mat-icon>
+                            <span>Delete</span>
+                        </button>
+                        <button mat-menu-item (click)="onUpdate(row)">
+                            <mat-icon>update</mat-icon>
+                            <span>Update</span>
+                        </button>
+                    </mat-menu>
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="stakeholderdisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: stakeholderdisplayedColumns;"></mat-row>
+        </mat-table>
+        <mat-paginator [length]="stakeholderArray.data.length" [pageSizeOptions]="[2,10,15,20,20]" [pageIndex]="0"
+            [pageSize]="10" showFirstLastButtons></mat-paginator>
+
+    </mat-card-content>
+</mat-card>

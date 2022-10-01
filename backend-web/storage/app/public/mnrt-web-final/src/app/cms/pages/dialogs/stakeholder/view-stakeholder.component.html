@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Stakeholder Detail</h2>
+<hr />
+<div mat-dialog-content class="py-3">
+    <div class="card">
+        <div class="row">
+            <!--<div class="col-md-4">
+                <img src="{{row.picture}}" class="w-100" alt="profile picture" onerror="this.src='/assets/images/stakeholder/default.png';">
+            </div>-->
+            <div class="col-md-12 px-3">
+                <div class="card-block px-3">
+                    <h1 class="card-title  text-uppercase text-primary"> {{row.sthdr_name}}</h1>
+                    <p class="card-text text-success">Category:<span>{{row.category}}</span></p>
+                    <p class="card-text">{{row.category}}</p>
+
+                    <p class="card-text text-success">Website:</p>
+                    <p class="card-text">{{row.website}}</p>
+
+                    <p class="card-text text-success">Email:</p>
+                    <p class="card-text">{{row.email}}</p>
+
+                    <p class="card-text text-success">Phone:</p>
+                    <p class="card-text">{{row.phone}}</p>
+
+                    <p class="card-text text-success">Postal Address:</p>
+                    <p class="card-text">{{row.postal_address}}</p>
+
+                    <p class="card-text text-success">Physical Address:</p>
+                    <p class="card-text">{{row.physical_address}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-dialog-actions align="end">
+    <button class="btn btn-secondary" mat-dialog-close style="margin-right: 10px;">Cancel</button>
+</mat-dialog-actions>

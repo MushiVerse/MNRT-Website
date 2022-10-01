@@ -1,0 +1,40 @@
+<form [formGroup]="NewForm">
+    <h2 mat-dialog-title>Add Wildlife Media Contents</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <div class="form-group col-lg-3 col-sm-3">
+                <img [src]="url" class="w-100" alt="Tourism Video">
+                    <input type="file" class="file-upload" (change)="onFileSelected($event)" accept="image/jpeg">
+            </div>
+            <div class="form-group col-lg-9 col-sm-12">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="title"
+                            placeholder="-Enter title-">
+                        <div *ngIf="NewForm.get('title')?.touched && NewForm.get('title')?.invalid"
+                            class="text-danger">Title is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Description</label>
+                            <textarea class="form-control form-control-sm" formControlName="des"
+                            placeholder="Enter Description"></textarea>
+                        <div *ngIf="NewForm.get('des')?.touched && NewForm.get('des')?.invalid"
+                            class="text-danger">Description is required</div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button  class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button  [disabled]="NewForm.invalid || !canAttach" type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>
+
+<!-- [disabled]="LeaderForm.invalid"  -->

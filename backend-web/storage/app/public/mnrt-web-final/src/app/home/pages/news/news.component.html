@@ -1,0 +1,37 @@
+
+<div class="row no-gutters">
+    <div class="col-sm-12 col-md-12 col-lg-12 project-col">
+      <div class="section_row_title">
+        <h2>Latest News</h2>
+        <hr class="section_header_line" />
+      </div>
+    </div>
+</div>
+<div class="row no-gutters news_row_content" >
+    <div class="col-lg-5 col-md-12 col-sm-12" >
+        <div style="background-image: url('{{news.img}}'); " class="news-img" (mouseover)="show_img_buttom=true" (mouseleave)="show_img_buttom=false">
+            <!-- <div class="news-img-link" *ngIf="show_img_buttom">
+                <button  class="read-button">READ MORE</button>
+            </div> -->
+        </div>
+    </div>
+    <div class="col-lg-7 col-md-12 col-sm-12">
+        <div class="news-details" >
+            <!-- <div class="news-detals-header" style="margin-bottom: 20px; font-size: 20px; font-weight: bold; font-family: $Bebas_font;">Latest News</div> -->
+            <h2>{{news.title}}</h2>
+            <h3>{{news.date}}</h3>
+            
+            <!-- <div class="news-detals-header" >
+                <h2>{{news.title}}</h2>
+                <h3>{{news.date}}</h3>
+            </div> -->
+
+            
+            <!-- <hr class="news_header_line" /> -->
+            <h4>
+              {{news.introduction}}
+            </h4>
+            <button  class="button">READ MORE</button>
+        </div>
+    </div>
+</div>

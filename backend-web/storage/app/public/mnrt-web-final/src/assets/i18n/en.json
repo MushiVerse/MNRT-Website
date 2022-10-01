@@ -1,0 +1,126 @@
+{
+    "nav":{
+        "TZ":"UNITED REPUBLIC OF TANZANIA",
+        "MNRANDT":"MINISTRY OF NATURAL RESOURCES AND TOURISM",
+        "MNR": "MINISTRY OF NATURAL RESOURCES",
+        "ANDT": "AND TOURISM",
+        "MN": "MENU",
+        "SRCH": "Search",
+        "CLS": "Close",
+        "SCTRS": "SECTORS",
+        "WLD": "Wildlife",
+        "TRSM": "Tourism",
+        "FRST": "Forestry And Beekeeping",
+        "ANTQ": "Antiquities",
+        "BEE": "BeeKeeping",
+        "CRS": "Crosscutting",
+        "STK": "STAKEHOLDERS",
+        "STK1": "Tour Operators",
+        "STK2": "Hunting Companies",
+        "RSC": "RESOURCES",
+        "RSC1": "Acts and Policies",
+        "RSC2": "Laws and Regulations",
+        "ABT": "About",
+        "NWS": "News",
+        "CONT": "Contacts",
+        "WHAT": "WHAT'S NEW",
+        "NWSEVT": "News and Events",
+        "PRESS": "Press Releases",
+        "TENDER": "Tenders and Vacancies",
+        "CMPNS": "Campaigns",
+        "GLRY": "Gallery",
+        "CROSS": "CROSSCUTTING UNITS",
+        "ICT": "ICT Unit",
+        "LGL": "Legal Unit",
+        "PROC": "Procurement Unit",
+        "ACCNT": "Accounting and Finance Unit",
+        "HR": "Human Resource and Administration",
+        "COM": "Communication Unit",
+        "PARA": "Paramilitary",
+        "ABTUS": "ABOUT US",
+        "OVERV": "Ministry Overview",
+        "ORG": "Organisation Structure",
+        "EX": "Executives",
+        "MGT": "Management",
+        "CONTD": "Contact Details",
+        "REPO": "Reports and Budgets",
+        "DOCU": "Documents and Forms",
+        "PROJE": "Projects and Programs",
+        "PUB":"Other Publications",
+        "TROPHY": "Trophy Dealers",
+        "LICENSED": "Licensed Researches",
+        "EXPORT": "Forest Products Exporters",
+        "SRV": "Services",
+        "FEE": "Fees, Levies and Taxes",
+        "GRD": "Hotel Grading and Classifications",
+        "BLOCK": "Hunting Block Applications",
+        "TOL": "Tour Operators Licensing",
+        "TDL": "Trophy Dealing Licensing",
+        "SYS": "Systems",
+        "MAIL": "Staff Emails",
+        "STKH": "Stakeholders"
+
+
+    },
+
+    "about":{
+        "MISSION": "OUR MISSION",
+        "MAELEZO1": "Sustainable conservation of natural and cultural resources and development of responsible tourism",
+        "VISION": "OUR VISION",
+        "MAELEZO2": "To conserve natural, cultural resources sustainably and develop tourism for national prosperity and benefit of mankind through development of appropriate policies, strategies and guidelines; formulation and enforcement of laws and regulations; monitoring and evaluation of policies and laws",
+        "RSC": "RESOURCES",
+        "ACT": "Acts and Policies",
+        "LAWS": "Laws and Regulations",
+        "REPO": "Reports and Budgets",
+        "DOC": "Documents and Forms",
+        "PROJE": "Projects and Programs",
+        "PUB": "Other Publications"
+
+    },
+
+    "habari":{
+        "KICHWA": "LATEST NEWS",
+        "ZAIDI": "READ MORE",
+        "EXEC": "EXECUTIVES"
+
+    },
+    
+    "vijisekta":{
+        "KICHWA2": "SUB-SECTORS",
+        "TOU": "TOURISM",
+        "WILD": "WILDLIFE",
+        "ANTIQ": "ANTIQUITIES",
+        "FORBEE": "FORESTRY AND BEEKEEPING"
+
+    },
+    "stat":{
+        "KICHWA3": "ATTRACTIONS"
+    },
+    "miradi": {
+        "KICHWA4": "PROJECTS AND PROGRAMS",
+        "ZAIDI": "VIEW MORE"
+    },
+    "slider": {
+        "TRSM": "TOURISM",
+        "WILD": "WILDLIFE",
+        "FORBEE":"FORESTRY AND BEEKEEPING",
+        "ANTI": "ANTIQUITIES"
+    },
+    "aboutlevel2": {
+        "MOVER": "MINISTRY OVERVIEW",
+        "VIS": "VISION",
+        "MAELEZO2": "To conserve natural, cultural resources sustainably and develop tourism for national prosperity and benefit of mankind through development of appropriate policies, strategies and guidelines; formulation and enforcement of laws and regulations; monitoring and evaluation of policies and laws",
+        "MIS": "MISSION",
+        "MAELEZO1": "Sustainable conservation of natural and cultural resources and development of responsible tourism",
+        "MINI": "THE MINISTRY",
+        "MAELEZO3": "Ministry of Natural Resources and Tourism of United Republic of Tanzania, is the Ministry responsible for management of Natural, Cultural and Tourism resources. Tanzania has a great potential for natural resources, cultural and tourism attractions. In terms of wildlife, the present network of wildlife Protected Areas (PAs) in Tanzania is comprised of 16 National Parks, Ngorongoro Conservation Area, 38 Game Reserves and 43 Game Controlled Areas. The wildlife protected area network covers 307,800 Sq. Km (32.5%) of the total Tanzania’s land surface area",
+        "HIST": "MINISTRY HISTORY"
+    },
+    "orgs": {
+        "ORG": "ORGANISATION STRUCTURE OF THE MINISTRY",
+        "DOWN": "Download"
+
+    }
+
+
+}

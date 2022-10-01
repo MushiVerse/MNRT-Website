@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Leader Detail</h2>
+<hr />
+<div mat-dialog-content class="py-3">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{row.picture}}" class="w-100" alt="profile picture" onerror="this.src='/assets/images/leaders/default.png';">
+            </div>
+            <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                    <h1 class="card-title"> <strong>{{row.leader_name}}</strong></h1>
+                    <h3><strong>{{row.leader_title}}</strong>(From: {{row.start_date}} To: {{row.end_date}})</h3>
+                    <p class="card-text">Biography</p>
+                    <p class="card-text">{{row.biography}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-dialog-actions align="end">
+    <button class="btn btn-secondary" mat-dialog-close style="margin-right: 10px;">Cancel</button>
+</mat-dialog-actions>

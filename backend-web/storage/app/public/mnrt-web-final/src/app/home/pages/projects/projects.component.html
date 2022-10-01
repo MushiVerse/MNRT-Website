@@ -1,0 +1,32 @@
+<div class="row no-gutters" *transloco="let t">
+  <div class="col-sm-12 col-md-12 col-lg-12 project-col">
+    <div class="section_row_title">
+      <h2>{{'miradi.KICHWA4' | transloco}}</h2>
+      <hr class="section_header_line" />
+    </div>
+    <div class="project-all">
+      <div class="project" *ngFor="let project of projects" >
+        <div>
+          <div class="project-title">
+            <!-- <mat-icon>label</mat-icon> -->
+            <h2>{{project.desc}}</h2>
+          </div>
+          <div class="project-date">
+            <h2>{{project.start_at}} | {{project.status}}</h2>
+            <!-- <hr /> -->
+          </div>
+        </div>
+        <span class="space"></span>
+        <div class="arrow">
+          <mat-icon>arrow_forward_ios</mat-icon>
+        </div>
+        
+      </div>
+      <button mat-flat-button class="button" routerLink="/resources/projectsandprograms">{{'miradi.ZAIDI' | transloco}}</button>
+    </div>
+    
+
+  </div>
+  <!-- <div class="col-sm-12 col-md-12 col-lg-5" style="padding: 20px;">
+    </div> -->
+</div>

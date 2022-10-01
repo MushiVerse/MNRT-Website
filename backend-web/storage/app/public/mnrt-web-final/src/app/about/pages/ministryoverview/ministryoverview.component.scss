@@ -1,0 +1,18 @@
+@import 'src/environments/_variables';
+
+
+.row-aboutus-details{
+    background: white;
+}
+.aboutus-content{
+    padding: 30px;
+
+    h2{
+        font-family: $Bebas_font;
+        font-size: 20px;
+    }
+    p{
+        font-family: $mnrt_font_family;
+        font-size: 15px;
+    }
+}

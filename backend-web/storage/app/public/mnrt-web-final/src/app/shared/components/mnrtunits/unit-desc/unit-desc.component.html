@@ -1,0 +1,41 @@
+<div class="row no-gutters row-main">
+    <div class="col-lg-12 col-md-12 col-sm-12 ">
+        <div class="container">
+            <div class="slider-text">
+                <h2 fxHide.gt-xs>{{desc.section}}</h2>
+                <h3 fxHide.gt-xs>{{desc.moto}}</h3>
+            </div>
+            <div class="content">
+                {{desc.desc1}}
+                <hr />
+            </div>
+            <h2>OUR COMMITMENT</h2>
+                
+            <div class="content">
+                {{desc.desc1}}
+                <hr />
+            </div>
+            <h2>OUR VALUES</h2>
+
+            <div id="values_row_container ">
+                <div class="row no-gutters">
+                    <div class="col-sm-12 col-md-4 col-lg-4" *ngFor="let value of desc.values">
+                        <div class="img-container">
+                            <div style="background-image: url('{{value.img}}');" class="values-img"></div>
+                            <div class="values-content">
+                                <h4>{{value.heading}}</h4>
+                                <hr class="values-line" />
+                                <h5>{{value.content}}</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row no-gutters">
+    <div class="col main-container">
+        <div class="child-container">
+            <h2>Top Leaders</h2>
+            <hr class="section_header_line" />
+            <div class="leaders-main-content">
+                <div class="leader-container">
+                    
+                    <div @fade style="background-image: url('{{minister.picture}}');" class="link-img"></div>
+                    <div class="link-content">
+                        <h3 @slide>{{minister.name}}</h3>
+                        <h4 @fade >{{minister.leader_title}}</h4>
+
+                        <!-- <mat-spinner *ngIf="minister.loader"></mat-spinner> -->
+                    </div>
+                </div>
+                <div class="leader-container" fxHide.lt-sm fxHide.sm>
+                    <div @fade style="background-image: url('{{deputy_miniter.picture}}');" class="link-img">
+                    </div>
+                    <div class="link-content">
+                        <h3 @slide>{{deputy_miniter.name}}</h3>
+                        <h4 @fade>{{deputy_miniter.leader_title}}</h4>
+                    </div>
+                </div>
+            </div>
+            <button mat-flat-button class="button">VIEW MORE</button>
+        </div>
+    </div>
+</div>

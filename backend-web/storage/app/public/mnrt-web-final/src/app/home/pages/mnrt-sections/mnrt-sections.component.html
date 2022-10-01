@@ -1,0 +1,132 @@
+<!-- Sections-->
+<ng-container *transloco="let t; scope:'home'">
+  <div class="row no-gutters section_row">
+    <div class="section_row_title">
+      <h2>Our Sectors</h2>
+      <hr class="section_header_line" />
+    </div>
+  </div>
+
+  <!-- tourims -->
+  <div class="row no-gutters" (mouseover)="istrue=true" (mouseleave)="istrue=false">
+    <div style="background-image: url('{{tourism.img}}'); " class="col tourism" routerLink="/tourism"
+      routerLinkActive="active">
+      <div class="tourism_content" [class.tourism_content_hover]="istrue">
+        <h2> {{ t('home.TRSM') }} </h2>
+        <!-- <hr /> -->
+        <h3> {{ tourism.desc }} </h3>
+        <button mat-flat-button class="button">{{ t('home.RD') }}</button>
+      </div>
+    </div>
+  </div>
+  <!-- wildlife -->
+  <div class="row no-gutters">
+    <div class="col wildlife_col">
+
+      <!-- wildlife carousel -->
+      <div id="carouselExampleControls2" class="carousel no-gutters slide carousel-fade" data-ride="carousel" data-interval="5000" data-pause="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleControls2" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleControls2" data-slide-to="1"></li>
+          <li data-target="#carouselExampleControls2" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div  class="carousel-item active" >
+            <div style="background-image: url('{{wildlife.img1}}');" class="img-all">
+              <div class="wildlife-carousel-container">
+                <h2> {{ t('home.WILD') }} </h2>
+                <h3> {{wildlife.desc1 }}</h3>
+                <button mat-flat-button class="fob_button" routerLink="/wildlife" routerLinkActive="active"> {{
+                  t('home.RD') }}</button>
+              </div>
+            </div>
+          </div>
+          <div  class="carousel-item" >
+            <div style="background-image: url('{{wildlife.img2}}');" class="img-all">
+              <div class="wildlife-carousel-container">
+                <h2> {{ t('home.WILD') }} </h2>
+                <h3> {{wildlife.desc2 }}</h3>
+                <button mat-flat-button class="fob_button" routerLink="/wildlife" routerLinkActive="active"> {{
+                  t('home.RD') }}</button>
+              </div>
+            </div>
+          </div>
+          <div  class="carousel-item" >
+            <div style="background-image: url('{{wildlife.img3}}');" class="img-all">
+              <div @slide class="wildlife-carousel-container">
+                <h2> {{ t('home.WILD') }} </h2>
+                <h3 > {{wildlife.desc3 }}</h3>
+                <button mat-flat-button class="fob_button" routerLink="/wildlife" routerLinkActive="active"> {{
+                  t('home.RD') }}</button>
+              </div>
+            </div>
+          </div> 
+        </div>
+        <!-- <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-gutters bees_row">
+    <div class="col-sm-12 col-md-12 col-lg-6" routerLink="/bees" routerLinkActive="active">
+      <!-- Bees -->
+      <div class="bees">
+        <h2> {{ t('home.BS') }} </h2><br />
+        <h3> {{ t('home.BSS') }} </h3>
+        <button mat-flat-button class="fob_button">{{ t('home.RD') }}</button>
+      </div>
+      <div style="background-image: url('/assets/images/bees/bees3.jpg'); " class="bees-img">
+      </div>
+    </div>
+    <!-- Forest -->
+    <div class="col-sm-12 col-md-12 col-lg-6 forest" style="background-image: url('/assets/images/forest/jozani_zanzibar.jpg'); ">
+      <div class="forest_overlay" routerLink="/forest" routerLinkActive="active">
+        <div class="forest_content">
+          <h2>{{ t('home.FRST') }}</h2>
+          <h3>{{ t('home.FRSTT') }}</h3>
+          <button mat-flat-button class="fob_button">{{ t('home.RD') }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- antiquities -->
+  <div class="row no-gutters antiquities_bg">
+    <div class="col-sm-12 col-md-12 col-lg-6" style="text-align: center;">
+      <div class="antiquities_img">
+
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="antiquities_details">
+        <h2>{{ t('home.ANTQ') }}</h2><br />
+        <h3>{{ t('home.ANTQQ') }}</h3>
+        <button mat-flat-button class="fob_button" routerLink="/antiquities" routerLinkActive="active">{{ t('home.RD')
+          }}</button>
+      </div>
+    </div>
+  </div>
+  <!-- paramilitary -->
+  <!-- <div class="row no-gutters param_bg">
+    <div class="col-sm-12 col-md-12 col-lg-6" style="text-align: center;">
+      <div class="param_img">
+
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="param_details">
+        <h2>{{ t('home.ANTQ') }}</h2><br />
+        <h3>{{ t('home.ANTQQ') }}</h3>
+        <button mat-flat-button class="fob_button" >{{ t('home.RD')
+          }}</button>
+      </div>
+    </div>
+  </div> -->
+
+</ng-container>

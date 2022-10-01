@@ -1,0 +1,29 @@
+@import 'src/environments/_variables';
+
+.all-slider{
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    height: 500px;
+    
+
+    .all-container{
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    h2{
+        margin-top: 5vw;
+        font-size: calc(15px + 3vw);
+        font-weight:500;
+        color: white;
+        //font-family: $mnrt_font_family;
+        font-family: $Bebas_font;
+    }
+}

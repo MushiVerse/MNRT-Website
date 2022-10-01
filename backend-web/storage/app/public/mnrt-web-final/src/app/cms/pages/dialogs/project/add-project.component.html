@@ -1,0 +1,146 @@
+<form [formGroup]="ProjectForm">
+    <h2 mat-dialog-title>New Project</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <!--<div class="form-group col-3">
+                <img src="" class="w-100" alt="profile picture"
+                    onerror="this.src='/assets/images/projects/default.png';">
+                <button class="btn btn-secondary">Upload Photo</button>
+            </div>-->
+            <div class="form-group col-12">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Project Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="project_title"
+                            placeholder="Enter Project Title">
+                        <div *ngIf="ProjectForm.get('project_title')?.touched && ProjectForm.get('project_title')?.invalid"
+                            class="text-danger">Project Title is required</div>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Project Details</label>
+                        <textarea class="form-control form-control-sm" formControlName="project_details"
+                            placeholder="Enter Project Details"></textarea>
+                        <div *ngIf="ProjectForm.get('project_details')?.touched && ProjectForm.get('project_details')?.invalid"
+                            class="text-danger">Project Details is required</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Project Cost</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="project_cost"
+                            placeholder="Enter Project Cost">
+                        <div *ngIf="ProjectForm.get('project_cost')?.touched && ProjectForm.get('project_cost')?.invalid"
+                            class="text-danger">Project Cost is required</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Project Funder</label>
+                        <textarea class="form-control form-control-sm" formControlName="project_funder"
+                            placeholder="Enter Project Funder"></textarea>
+                        <div *ngIf="ProjectForm.get('project_funder')?.touched && ProjectForm.get('project_funder')?.invalid"
+                            class="text-danger">Project Funder is required</div>
+                    </div>
+                </div>
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label >Title</label>
+                        <select formControlName="title" class="form-control form-control-sm">
+                          <option *ngFor="let title of titles" value="{{title.value}}" [selected]="title.selected == true">{{title.text}}</option>
+                        </select>
+                        <div *ngIf="ProjectForm.get('title')?.touched && ProjectForm.get('title')?.invalid"
+                            class="text-danger">Title is required</div>
+                      </div>
+                </div>-->
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label >Facebook Link</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="facebook_link"
+                            placeholder="Enter Facebook Link">
+                        <div *ngIf="ProjectForm.get('facebook_link')?.touched && ProjectForm.get('facebook_link')?.invalid"
+                            class="text-danger">Facebook Link is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Instagram Link</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="instagram_link"
+                            placeholder="Enter Instagram Link">
+                        <div *ngIf="ProjectForm.get('instagram_link')?.touched && ProjectForm.get('instagram_link')?.invalid"
+                            class="text-danger">Instagram Link is required</div>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Twitter Link</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="twitter_link"
+                            placeholder="Enter Name">
+                        <div *ngIf="ProjectForm.get('twitter_link')?.touched && ProjectForm.get('twitter_link')?.invalid"
+                            class="text-danger">Twitter Link is required</div>
+                      </div>
+                </div>-->
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="title"
+                            placeholder="Enter Title">
+                        <div *ngIf="ProjectForm.get('title')?.touched && ProjectForm.get('title')?.invalid"
+                            class="text-danger">Title is required</div>
+                    </div>
+                </div>-->
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title Start</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="start_date">
+                        <div *ngIf="ProjectForm.get('start_date')?.touched && ProjectForm.get('start_date')?.invalid"
+                            class="text-danger">Start date is required</div>
+                    </div>
+                    <div class="form-group col">
+                        <label>Title End</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="start_end" >
+                    </div>
+                </div>-->
+                <!--<div class="form-row">
+                    <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="start_date" ngbDatepicker #d1="ngbDatepicker" [startDate]="fromDate!">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d1.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                        <div *ngIf="ProjectForm.get('start_date')?.touched && ProjectForm.get('start_date')?.invalid"
+                            class="text-danger">Start date is required</div>
+                      </div>
+                      <div class="form-group col">
+                        <label>Title Start Date</label>
+                        <div class="input-group">
+                          <input class="form-control form-control-sm" placeholder="yyyy-mm-dd"
+                           formControlName="end_date" ngbDatepicker #d2="ngbDatepicker">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                          </div>
+                        </div>
+                      </div>
+                </div>-->
+                
+            </div>
+        </div>
+
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button [disabled]="ProjectForm.invalid" type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>

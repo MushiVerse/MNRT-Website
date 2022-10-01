@@ -1,0 +1,220 @@
+<!-- spinner -->
+<div *ngIf="spinner.isLoading | async" class="loader-container">
+  <!-- <mat-progress-bar mode="indeterminate" ></mat-progress-bar> -->
+  <!-- <mat-spinner style="top: 50%; left: 50%;"></mat-spinner> -->
+  <div style="top: 50%; left: calc(50% - 30px);" class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+
+<nav class="navbar no-gutters fixed-top navbar-expand-lg navbar-light" [class.navbar-light-scrolled]="nav_variable"
+  *transloco="let t; lang: 'sw'">
+  <a class="navbar-brand" href="/">
+    <div class="logo">
+      <div class="logo-image d-none d-md-block">
+        <img src="/assets/images/logo.png" alt="" class="log-img">
+      </div>
+      <div class="logo-text">
+        <div class="country" fxHide.lt-sm fxHide.sm>
+          {{'nav.TZ' | transloco}}
+        </div>
+        <div class="ministry" fxHide.lt-sm fxHide.sm>
+          {{'nav.MNRANDT' | transloco}}
+        </div>
+        <div class="ministry" fxHide.gt-sm>
+          {{'nav.MNR' | transloco}} <br /> {{'nav.ANDT' | transloco}}
+        </div>
+      </div>
+    </div>
+
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+
+      <!-- <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" >About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MNRT Section
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" routerLink="/tourism" >Tourism</a>
+                <a class="dropdown-item" href="#" routerLink="/forest" >Forest</a>
+                <a class="dropdown-item" href="#">Other</a>
+              </div>
+            </li> -->
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModalLong">
+          <div class="menu-item">
+            {{'nav.MN' | transloco}}
+          </div>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" mat-mini-fab class="search_icon" data-toggle="modal" data-target="#searchModalCenter">
+          <mat-icon>search</mat-icon>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show"
+          (click)="switch_lang()">{{ selected_lang }}</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- Menu Modal -->
+<div class="modal fade modal-fullscreen" id="exampleModalLong" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-bg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button routerLink="/home" class="menu-home-icon-button" type="button" data-dismiss="modal">
+            <mat-icon class="menu-home-icon">home</mat-icon>
+          </button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <mat-icon class="close-icon">close</mat-icon>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-4 body-col">
+              <div class="menu-heading">{{'nav.SCTRS' | transloco}} </div>
+              <hr/>
+              <div class="menu-items" routerLink="/tourism" data-dismiss="modal">{{'nav.TRSM' | transloco}}<hr /></div>
+              <div class="menu-items" routerLink="/wildlife" data-dismiss="modal">{{'nav.WLD' | transloco}}<hr /></div>
+              <div class="menu-items" routerLink="/forest" data-dismiss="modal">{{'nav.FRST' | transloco}}<hr /></div>
+              <div class="menu-items" routerLink="/antiquities" data-dismiss="modal">{{'nav.ANTQ' | transloco}}<hr /></div>
+              <div class="menu-items" routerLink="/bees" data-dismiss="modal">{{'nav.BEE' | transloco}}<hr /></div>
+              <!-- <div class="menu-items" routerLink="/units" data-dismiss="modal">{{'nav.CRS' | transloco}}<hr /></div> -->
+              <div class="menu-items">Paramilitary<hr /></div>
+
+            </div>
+            <div class="col-lg-4 body-col">
+              <div class="menu-heading">{{'nav.STK' | transloco}}</div>
+              <hr/>
+              <div class="menu-items" routerLink="/stakeholders/tours" data-dismiss="modal" >{{'nav.STK1' | transloco}}<hr /></div>
+              <div class="menu-items" routerLink="/stakeholders/huntingcompanies" data-dismiss="modal">{{'nav.STK2' | transloco}}<hr /></div>
+              <div class="menu-items" routerLink="/stakeholders/trophydealers" data-dismiss="modal" >Trophy Dealers<hr /></div>
+              <div class="menu-items" routerLink="/stakeholders/licencedresearches" data-dismiss="modal">Licenced Researches<hr /></div>
+              <div class="menu-items" routerLink="/stakeholders/forestexport" data-dismiss="modal">Forest Product Expoters<hr /></div>
+  
+
+            </div>
+            <div class="col-lg-4 body-col">
+              <div class="menu-heading">{{'nav.RSC' | transloco}} </div>
+              <hr/>
+              <div class="menu-items">{{'nav.RSC1' | transloco}} <hr /></div>
+              <div class="menu-items">{{'nav.RSC2' | transloco}} <hr /></div>
+              <div class="menu-items">Reports and Budgets<hr /></div>
+              <div class="menu-items">Documents and Forms<hr /></div>
+              <div class="menu-items">Projects and Programs<hr /></div>
+              <div class="menu-items">Other Publications<hr /></div>
+
+            </div>
+            <div class="col-lg-4 body-col">
+              <div class="menu-heading">WHAT'S NEW</div>
+              <hr/>
+              <div class="menu-items">News and Events <hr /></div>
+              <div class="menu-items">Press Releases <hr /></div>
+              <div class="menu-items">Tenders and Vacancies<hr /></div>
+              <div class="menu-items">Campains<hr /></div>
+              <div class="menu-items">Gallery<hr /></div>
+
+            </div>
+            <div class="col-lg-4 body-col">
+              <div class="menu-heading">CROSSCUTTING UNITS</div>
+              <hr/>
+              <div class="menu-items" routerLink="/units/ict" data-dismiss="modal">ICT Unit<hr /></div>
+              <div class="menu-items" routerLink="/units/ligal" data-dismiss="modal">Legal Unit<hr /></div>
+              <div class="menu-items" routerLink="/units/pmu" data-dismiss="modal">Procurement Unit<hr /></div>
+              <div class="menu-items" routerLink="" data-dismiss="modal">Account and Finince Unit<hr /></div>
+              <div class="menu-items" routerLink="" data-dismiss="modal">Human Resource and Administration<hr /></div>
+              <div class="menu-items" routerLink="" data-dismiss="modal">Communication Unit<hr /></div>
+            </div>
+            <div class="col-lg-4 body-col">
+              <div class="menu-heading">PEOPLE</div>
+              <hr/>
+              <div class="menu-items" routerLink="/staff/leaders" data-dismiss="modal">Top Leaders<hr /></div>
+              <div class="menu-items" routerLink="/staff/all" data-dismiss="modal">Management<hr /></div>
+              <div class="menu-items" routerLink="/staff/all" data-dismiss="modal">Our Staff<hr /></div>
+            </div>
+          </div>
+
+          <!-- <div class="row menu-search-row">
+            <div class="col-lg-12">
+              <div class="menu-search-header">{{'nav.SRCH' | transloco}} </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="input-group">
+                <input class="form-control py-2 border-right-0 border menu-search-input" type="search"
+                  placeholder="{{'nav.SRCH' | transloco}}" id="search-input">
+                <span class="input-group-append">
+                  <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="menu-buttons" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Search Modal -->
+<div class="modal fade modal-fullscreen" id="searchModalCenter" tabindex="-1" role="dialog"
+  aria-labelledby="searchModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-bg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button routerLink="/home" class="menu-home-icon-button" type="button" data-dismiss="modal">
+            <mat-icon class="menu-home-icon">home</mat-icon>
+          </button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <mat-icon class="close-icon">close</mat-icon>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row search-search-row">
+            <div class="col-lg-12">
+              <div class="menu-search-header">{{'nav.SRCH' | transloco}}</div>
+            </div>
+            <div class="col-lg-12">
+              <div class="input-group">
+                <input class="form-control py-2 border-right-0 border menu-search-input" type="search"
+                  placeholder="{{'nav.SRCH' | transloco}}" id="search-input">
+                <span class="input-group-append">
+                  <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <!-- <button type="button" class="menu-buttons" data-dismiss="modal">Close</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

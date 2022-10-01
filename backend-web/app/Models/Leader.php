@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Leader extends Model
+{
+    use HasFactory;
+    use SoftDeletes;
+ 
+    protected $fillable = [
+        'leader_name',
+        'leader_title',
+        'facebook_link',
+        'instagram_link',
+        'twitter_link',
+        'start_date',
+        'end_date',
+        'picture',
+        'biography',
+        'created_by',
+        'updated_by',
+        'deleted_by',
+        'status',
+        'created_at',
+        'updated_at',
+    ];
+    protected $dates = ['deleted_at'];
+    
+}

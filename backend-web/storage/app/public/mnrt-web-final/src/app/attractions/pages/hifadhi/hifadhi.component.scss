@@ -1,0 +1,23 @@
+.filter{
+    padding: 5px;
+}
+
+button{
+    border: none !important;
+    background: none !important;
+    color: #135029 !important;
+    
+}
+.mat-column-address, .mat-column-decl_year{
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 1 0 20% !important;
+    width: 20% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}

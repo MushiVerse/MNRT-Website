@@ -1,0 +1,16 @@
+/storage/app/public/mnrt-web-final/node_modules
+/storage/app/public/mnrt-web-final/yarn.lock
+/node_modules
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+.DS_Store

@@ -1,0 +1,152 @@
+<div class="row no-gutters">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div style="background-image: url('{{header_img}}'); " class="division-header-img" routerLink="/tourism">
+            <div class="division-header">
+                <h2>
+                    About Tourism Division
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row no-gutters about-row">
+    <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="about-details">
+            <h3>
+                Departments and Sectors
+            </h3>
+            <hr class="about_line" />
+            <div class="content">
+                The Tourism Division is one of the divisions in the Ministry of Natural Resources and Tourism. It is
+                responsible for the Sectoral Policy, Planning, Research, Manpower, Training, Statistics, Licensing and
+                Quality control of Tourist agents.
+            </div>
+            <div class="content">
+                The division is divided into three sections, headed by Assistant Directors. The sections are Licensing
+                and Quality Control section (LC), Tourism Development (TD) and Research, Training and Statistics (RTS).
+            </div>
+            <div class="content">
+                Tourism Division’s major objective is to ensure the implementation of the National Tourism Policy as
+                well as regulatory functions. The main objective of National Tourism Policy is; seeking to assist in
+                efforts to promote the economy and livelihood of the people, essentially poverty alleviation. This is
+                done by encouraging the development of sustainable and quality tourism that is culturally and socially
+                acceptable, ecologically friendly, environmentally sustainable and economically viable.
+            </div>
+            <br /><br />
+            <h3>
+                Roles of The Division
+            </h3>
+            <hr class="about_line" />
+            <div class="content">
+                The Division is responsible for formulation and enhancement of sectoral policy and regulatory functions:
+            </div>
+            <br /><br />
+            <h3>
+                This entails
+            </h3>
+            <hr class="about_line" />
+            <div class="content">
+                - Sectoral planning and budgeting<br />
+                - Formulating and reviewing legislation<br />
+                - Monitoring and evaluation of the sector<br />
+                - Manpower planning and human resource development<br />
+                - Researching, training and curriculum development<br />
+                - Licensing and control of tourist agency business.<br />
+                - International co-operation and collaboration<br />
+                - Identification of tourist attractions and diversification of tourism activities.<br />
+                - Undertaking impact assessment on cultural and social-economic activities<br />
+                - Setting and reviewing license fees and monitoring their issuance<br />
+                - Controlling quality of tourism facilities & ervices by carrying out inspection,classification and
+                grading<br />
+                - Taking legal action against violators<br />
+                - Appraising investment proposals<br />
+                - Undertaking resource mobilization from within and external<br />
+                - Developing and promoting domestic tourism.<br />
+            </div>
+            <br /><br />
+            <h3>
+                SECTIONS OF THE DIVISION
+            </h3>
+            <hr class="about_line" />
+            <div class="content">
+                The Division is divided into three sections which are:
+            </div>
+
+            <mat-accordion>
+                <mat-expansion-panel hideToggle class="agencies-expansion-panel">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title class="expansion-title">
+                            Tourism Development (TD)
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="expansion-content">The section deals with sectoral Policy, National and International
+                        cooperation, identification of tourist attraction and diversification of tourism activities,
+                        developing and promoting domestic tourism.</div>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title class="expansion-title">
+                            Research Training & Statistics (RTS)
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="expansion-content">
+                        This section deals with manpower planning and human resources development, management of
+                        information system, research and training, monitoring and evaluation of the sector performance
+                        i.e. collection and store tourism statistics.
+                    </div>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title class="expansion-title">
+                            Licensing and Control Section (LC)
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="expansion-content">
+                        This is the section that deals with monitoring and control of all tourist agents in the country.
+                        In Tanzania the tourism business was previously regulated and controlled by Tourism Agents Act
+                        of 1969 and Hotel Act of 1963. In 2008 the new act, Tourism Act of 2008 came into operation and
+                        is the one which is currently in use.
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <br /><br />
+            <h3>
+                Contacts
+            </h3>
+            <hr class="about_line" />
+            <div class="content">
+                P.O Box 9372, Dar es Salaam, Tanzania.<br />
+                Email: dt@mnrt.go.tz,<br />
+                Tel: +255 22 2864271,<br />
+                Fax +255 22 2864272<br />
+            </div>
+            <br /><br />
+            <h3>
+                Zonal Tourism Office
+            </h3>
+            <hr class="about_line" />
+            <div class="content">
+                Box 3134, Arusha.<br />
+                Email: tourism.arusha@mnrt.go.tz<br />
+                Tel: +255 73 2979833<br />
+            </div>
+        </div>
+    </div>
+
+    <!-- links components -->
+    <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="about-links">
+            <div class="img-container" *ngFor="let card of cards">
+                <div style="background-image: url('{{card.img}}'); " class="link">
+                    <div class="link-content">
+                        {{card.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

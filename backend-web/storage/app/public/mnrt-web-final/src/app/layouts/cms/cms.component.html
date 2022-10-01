@@ -1,0 +1,286 @@
+<!-- spinner -->
+<div class="spinner-container">
+    <div *ngIf="spinner.isCMSLoading | async">
+        <mat-progress-bar mode="indeterminate" style="color: goldenrod"></mat-progress-bar>
+    </div>
+</div>
+
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+    <div class="logo-image d-none d-md-block">
+        <img src="/assets/images/logo.png" alt="" class="log-img" />
+    </div>
+    MNRT WEB ADMIN
+    <span class="example-spacer"></span>
+    <div [matMenuTriggerFor]="menu" class="user-menu">
+        <mat-icon>person</mat-icon><small>{{ user }}</small>
+    </div>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+      <mat-icon>subject</mat-icon>
+      <span>Profile</span>
+    </button>
+        <button (click)="this.sharedService.logout()" mat-menu-item>
+      <mat-icon>loop</mat-icon>
+      <span>Logout</span>
+    </button>
+    </mat-menu>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <div class="navigation-menu" fxLayout="column">
+            <mat-accordion>
+                <mat-expansion-panel hideToggle [disabled]="true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title class="expansion-title">
+                            <div [routerLink]="['/cms/home']" routerLinkActive="selected" [routerLinkActiveOptions]="{ exact: true }" mat-button class="menu-button menu-group">
+                                <mat-icon>dashboard</mat-icon>
+                                <span>Dashboard</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>account_circle</mat-icon>
+                                <span>Home</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button [routerLink]="['/cms/home/attractions']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Attractions</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/leaders']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Leaders</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/projects']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Projects</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/slider']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Slider</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/subsectors']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Subsectors</span>
+                    </button>
+
+
+                </mat-expansion-panel>
+
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>chrome_reader_mode</mat-icon>
+                                <span>What's New</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button [routerLink]="['/cms/home/advertisements']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Advertisements</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/announcements']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Announcements</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/news']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>News</span>
+                    </button>
+
+                </mat-expansion-panel>
+
+                <!-- sector starts -->
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>donut_large</mat-icon>
+                                <span>Sectors</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <button [routerLink]="['/cms/home/cmsantiquities']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Antiquities</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/cmsbeekeeping']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Beekeeping</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/cmsforest']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Forest</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/cmstourism']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Tourism</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/cmswildlife']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Wildlife</span>
+                    </button>
+
+
+                </mat-expansion-panel>
+
+                <!-- end of Sectors component -->
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>person</mat-icon>
+                                <span>Staff</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button [routerLink]="['/cms/home/directors']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Directors</span>
+          </button>
+                    <button [routerLink]="['/cms/home/management']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Management</span>
+          </button>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>account_balance</mat-icon>
+                                <span>Stakeholders</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <button [routerLink]="['/cms/home/forest_products_exporters']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Forest Products Exporters</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/hunting_companies']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Hunting Companies</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/licensed_researches']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Licensed Researches</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/stakeholders']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Tour Operator</span>
+          </button>
+
+                    <button [routerLink]="['/cms/home/trophy_dealers']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Trophy Dealers</span>
+          </button>
+
+
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>settings_input_composite</mat-icon>
+                                <span>Units</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <button [routerLink]="['/cms/home/account_finance_unit']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Account and Finance</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/human_resource_unit']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Human Resource and Administration</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/ict_unit']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>ICT</span>
+          </button>
+                    <button [routerLink]="['/cms/home/ligal_unit']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Legal</span>
+          </button>
+                    <button [routerLink]="['/cms/home/procurement_unit']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Procurement</span>
+          </button>
+
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>work</mat-icon>
+                                <span>About Us</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button [routerLink]="['/cms/home/contacts']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>About </span>
+                    </button>
+                    <button [routerLink]="['/cms/home/contacts']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Contacts</span>
+                    </button>
+
+                    <button [routerLink]="['/cms/home/ministry_overview']" routerLinkActive="selected" mat-button class="menu-button">
+                      <span>Ministry Overview</span>
+                    </button>
+
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header class="arrow">
+                        <mat-panel-title class="expansion-title">
+                            <div class="menu-button menu-group">
+                                <mat-icon>file_copy</mat-icon>
+                                <span>Resources</span>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button [routerLink]="['/cms/home/acts_policies']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Acts and Policies</span>
+          </button>
+          <button [routerLink]="['/cms/home/documents']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Documents and Forms</span>
+          </button>
+                    <button [routerLink]="['/cms/home/laws_regulations']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Laws and Regulations</span>
+          </button>
+          
+          <button [routerLink]="['/cms/home/projects']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Projects and Programmes</span>
+          </button>
+                    <button [routerLink]="['/cms/home/reports_budgets']" routerLinkActive="selected" mat-button class="menu-button">
+            <span>Reports and Budgets</span>
+          </button>
+
+                </mat-expansion-panel>
+            </mat-accordion>
+
+            <mat-divider></mat-divider>
+
+            <button mat-button class="menu-button">
+        <mat-icon>help</mat-icon>
+        <span>Help</span>
+      </button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content style="padding: 8px">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<div mat-footer class="footer">
+    <strong>MNRT &copy; 2021</strong>
+</div>

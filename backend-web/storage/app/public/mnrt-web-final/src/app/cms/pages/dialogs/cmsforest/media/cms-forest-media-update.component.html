@@ -1,0 +1,46 @@
+<form [formGroup]="NewForm">
+    <h2 mat-dialog-title>Update Forest Media Contents</h2>
+    <hr />
+    <mat-dialog-content>
+        <div class="form-row">
+            <div class="form-group col-lg-3 col-sm-3">
+                <img [src]="image_linkurl" class="w-100" alt="Video link"
+                    onerror="this.src='/assets/images/leaders/default.png';">
+                    <input type="file" class="file-upload" (change)="onFileSelected($event)" accept="image/mp4">
+            </div>
+            <div class="form-group col-lg-9 col-sm-12">
+            
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>description</label>
+                            <textarea class="form-control form-control-sm" formControlName="news_des"
+                            placeholder="Enter news_description"></textarea>
+                        <div *ngIf="NewForm.get('news_des')?.touched && NewForm.get('news_des')?.invalid"
+                            class="text-danger">description is required</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label >Media Title</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="news_title"
+                            placeholder="-Enter title-">
+                        <div *ngIf="NewForm.get('news_title')?.touched && NewForm.get('news_title')?.invalid"
+                            class="text-danger">Media Title is required</div>
+                      </div>
+                </div>
+                
+               
+            </div>
+        </div>
+
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button  class="btn btn-secondary" (click)="onClose()" style="margin-right: 10px;">Cancel</button>
+        <button type="submit" (click)="onSubmit()"
+            class="btn btn-success">Submit</button>
+    </mat-dialog-actions>
+</form>
+
+<!-- [disabled]="NewForm.invalid"  -->

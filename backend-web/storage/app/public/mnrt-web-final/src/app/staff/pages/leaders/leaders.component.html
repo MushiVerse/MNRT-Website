@@ -1,0 +1,175 @@
+<div class="row no-gutters">
+    <div class="col leveltwo-main-panel">
+        <div class="leveltwo-main-contents">
+            <h2>EXECUTIVES</h2>
+            <hr />
+        </div>
+    </div>
+</div>
+<div class="row no-gutters row-leader">
+    <div class="col">
+        <div class="col-leader">
+            <!-- minister -->
+            <div class="main">
+                <div class="leader-container" style="background-image: url('{{minister.picture}}');"
+                    [routerLink]="['/staff/biography',minister.id]">
+                    <div class="link-content">
+                    </div>
+                </div>
+                <div class="details">
+                    <h4>{{minister.name}}</h4>
+                    <h5>{{minister.leader_title}}</h5>
+                    <button [routerLink]="['/staff/biography',minister.id]" class="button">Biography</button>
+                </div>
+            </div>
+            <hr />
+            <!-- deputy minister -->
+            <div class="main">
+                <div class="leader-container" style="background-image: url('{{deputy_miniter.picture}}');"
+                    [routerLink]="['/staff/biography',deputy_miniter.id]">
+                    <div class="link-content">
+                    </div>
+                </div>
+                <div class="details">
+                    <h4>{{deputy_miniter.name}}</h4>
+                    <h5>{{deputy_miniter.leader_title}}</h5>
+                    <button [routerLink]="['/staff/biography',deputy_miniter.id]" class="button">Biography</button>
+                </div>
+            </div>
+            <hr />
+            <!-- katibu mkuu -->
+            <div class="main">
+                <div class="leader-container" style="background-image: url('{{secretary.picture}}');"
+                    [routerLink]="['/staff/biography',secretary.id]">
+                    <div class="link-content">
+                    </div>
+                </div>
+                <div class="details">
+                    <h4>{{secretary.name}}</h4>
+                    <h5>{{secretary.leader_title}}</h5>
+                    <button [routerLink]="['/staff/biography',secretary.id]" class="button">Biography</button>
+                </div>
+            </div>
+            <hr />
+            <!-- naibu katibu mkuu -->
+            <div class="main">
+                <div class="leader-container" style="background-image: url('{{deputy_secretary.picture}}');"
+                    [routerLink]="['/staff/biography',deputy_secretary.id]">
+                    <div class="link-content">
+                    </div>
+                </div>
+                <div class="details">
+                    <h4>{{deputy_secretary.name}}</h4>
+                    <h5>{{deputy_secretary.leader_title}}</h5>
+                    <button [routerLink]="['/staff/biography',deputy_secretary.id]" class="button">Biography</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="row no-gutters" style="background: white; padding-top: 30px;">
+    <div class="col">
+        <div class="leader-container">
+            <div class="leader-one">
+             <div class="img-container" style="background-image: url('{{minister.picture}}');" [routerLink]="['/staff/biography',minister.id]">
+                 <div  class="link-img"></div>
+                 <div class="link-content" >
+                     <h4>{{minister.name}}</h4>
+                     <h5>{{minister.leader_title}}</h5>
+                 </div>
+             </div> 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row no-gutters" style="background: white; padding-bottom: 30px;">
+    <div class="col-lg-4 col-md-4">
+        <div class="leader-container">
+            <div class="img-container" style="background-image: url('{{deputy_miniter.picture}}');" [routerLink]="['/staff/biography',deputy_miniter.id]">
+                <div  class="link-img"></div>
+                <div class="link-content" >
+                    <h4>{{deputy_miniter.name}}</h4>
+                    <h5>{{deputy_miniter.leader_title}}</h5>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="leader-container">
+            <div class="img-container" style="background-image: url('/assets/images/leaders/permanent_secretary.jpg');">
+                <div  class="link-img"></div>
+                <div class="link-content" >
+                    <h4>Dr. Allan Herbert Kijazi</h4>
+                    <h5>Permanent Secretary</h5>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="leader-container">
+            <div class="img-container" style="background-image: url('/assets/images/leaders/deputy_permanent_secretary.jpg');">
+                <div  class="link-img"></div>
+                <div class="link-content" >
+                    <h4>Bw Ludovick James Nduhiye</h4>
+                    <h5>Deputy Permanent Secretary</h5>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+<!-- 
+<div class="row no-gutters minister-container">
+    <div class="col-sm-12 col-md-5 col-lg-5 min-img-col">
+        <div class="minister-img-container">
+            <img class="top-leader-img" src="/assets/images/leaders/minister.jpg" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-7 col-lg-7 ">
+        <div class="minister-details">
+            <h2>
+                Hon. Dr. Damas D. Ndumbaro
+            </h2>
+            <h3>
+                MINISTER
+            </h3>
+            <button class="fob_button" > Biography </button>
+
+        </div>
+    </div>
+</div>
+<div class="row no-gutters">
+    <div class="col-sm-12 col-md-12 col-lg-4">
+        <div class="other-leader-container">
+            <img class="other-leader-img" src="/assets/images/leaders/deputy_minister.jpg" />
+            <h2>Hon. Mary F. Masanja</h2>
+            <h3>DEPUTY MINISTER</h3>
+            <button class="fob_button" > Biography </button>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 other-col">
+        <div class="other-leader-container">
+            <img class="other-leader-img" src="/assets/images/leaders/permanent_secretary.jpg" />
+            <h2>Dr. Allan Herbert Kijazi </h2>
+            <h3>PERMANENT SECRETARY</h3>
+            <button class="fob_button" > Biography </button>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="other-leader-container">
+            <img class="other-leader-img" src="/assets/images/leaders/deputy_permanent_secretary.jpg" />
+            <h2>Bw Ludovick James Nduhiye</h2>
+            <h3>DEPUTY PERMANENT SECRETARY</h3>
+            <button class="fob_button" > Biography </button>
+        </div>
+    </div>
+</div> -->
